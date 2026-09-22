@@ -8,7 +8,7 @@
   },
   "autoDoors": 6,
   "loopingFans": 6,
-  "emissiveFixtures": 22,
+  "emissiveFixtures": 23,
   "mobileLights": 6,
   "mobileShadowMaps": 1,
   "checks": "walls, windows, doors both sides, garage, phone, all 32 crates, relocated staff services, notice attachment, carrot clearance/collision, fan playback, fixture lighting and cleanup, all materials lit and double sided"

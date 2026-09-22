@@ -3,6 +3,8 @@ import * as THREE from "three";
 import { BinCategory, ControlsState } from "./types";
 import { AreaManifestLoader, LoadAreasProgress } from "./areaManifestLoader";
 import { ImportedWorld, RegistryCounts } from "./importedWorld";
+import { WorldEffects } from "./worldEffects";
+import { SkyCycle } from "./skyCycle";
 interface RecordStoreCanvasProps {
 bins: BinCategory[];
 activeBin: BinCategory | null;
@@ -57,64 +59,7 @@ const height = container.clientHeight;
 const scene = new THREE.Scene();
 scene.background = new THREE.Color("#030712");
 scene.fog = new THREE.FogExp2("#030712", 0.008);
-const starCanvas = document.createElement("canvas");
-starCanvas.width = 16;
-starCanvas.height = 16;
-const sCtx = starCanvas.getContext("2d");
-if (sCtx) {
-const grad = sCtx.createRadialGradient(8, 8, 0, 8, 8, 8);
-grad.addColorStop(0, "rgba(255, 255, 255, 1)");
-grad.addColorStop(0.4, "rgba(255, 255, 255, 0.8)");
-grad.addColorStop(1, "rgba(255, 255, 255, 0)");
-sCtx.fillStyle = grad;
-sCtx.beginPath();
-sCtx.arc(8, 8, 8, 0, Math.PI * 2);
-sCtx.fill();
-}
-const starDiscTex = new THREE.CanvasTexture(starCanvas);
-const starCount = 1200;
-const starGeo = new THREE.BufferGeometry();
-const starPositions = new Float32Array(starCount * 3);
-const starColors = new Float32Array(starCount * 3);
-for (let i = 0; i < starCount; i++) {
-const u = Math.random();
-const phi = Math.acos(u);
-const theta = Math.random() * Math.PI * 2;
-const radius = 85 + Math.random() * 10;
-starPositions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
-starPositions[i * 3 + 1] = radius * Math.cos(phi);
-starPositions[i * 3 + 2] = radius * Math.sin(phi) * Math.sin(theta);
-const tint = Math.random();
-if (tint > 0.8) {
-starColors[i * 3] = 0.7;
-starColors[i * 3 + 1] = 0.9;
-starColors[i * 3 + 2] = 1.0;
-}
-else if (tint > 0.6) {
-starColors[i * 3] = 1.0;
-starColors[i * 3 + 1] = 0.95;
-starColors[i * 3 + 2] = 0.8;
-}
-else {
-starColors[i * 3] = 1.0;
-starColors[i * 3 + 1] = 1.0;
-starColors[i * 3 + 2] = 1.0;
-}
-}
-starGeo.setAttribute("position", new THREE.BufferAttribute(starPositions, 3));
-starGeo.setAttribute("color", new THREE.BufferAttribute(starColors, 3));
-const starMat = new THREE.PointsMaterial({
-size: 1.8,
-sizeAttenuation: false,
-map: starDiscTex,
-vertexColors: true,
-transparent: true,
-opacity: 0.9,
-depthWrite: false,
-fog: false
-});
-const starField = new THREE.Points(starGeo, starMat);
-scene.add(starField);
+
 const camera = new THREE.PerspectiveCamera(65, width / height, 0.1, 300);
 camera.position.set(cameraPosRef.current.x, cameraPosRef.current.y, cameraPosRef.current.z);
 const coarse = window.matchMedia('(pointer: coarse)').matches;
@@ -123,22 +68,14 @@ renderer.setSize(width, height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, coarse ? 1.25 : 2));
 renderer.shadowMap.enabled = true;
 container.appendChild(renderer.domElement);
-const ambientLight = new THREE.AmbientLight("#ffffff", 2.2);
-scene.add(ambientLight);
-const mainLight = new THREE.DirectionalLight("#ffffff", 1.8);
-mainLight.position.set(0, 15, 0);
-scene.add(mainLight);
-const aislePositions = [-12, -4, 4, 12];
-aislePositions.forEach((x) => {
-const pLight = new THREE.PointLight("#fef08a", 2.0, 35);
-pLight.position.set(x, 10, 0);
-scene.add(pLight);
-});
+const skyCycle = new SkyCycle(scene, renderer, coarse);
+
 const domEl = renderer.domElement;
 domEl.style.touchAction = 'none';
 let disposed = false;
 const areaLoader = new AreaManifestLoader();
 let importedWorld: ImportedWorld | null = null;
+let worldEffects: WorldEffects | null = null;
 setWorldCounts(null);
 const unlock = () => { if (document.pointerLockElement === domEl)
 document.exitPointerLock(); };
@@ -159,10 +96,13 @@ const spawn = importedWorld.getSpawnPosition();
 if (spawn)
 camera.position.copy(spawn);
 cameraPosRef.current = { x: camera.position.x, y: camera.position.y, z: camera.position.z };
+worldEffects = new WorldEffects(areas, renderer, coarse, scene);
 setWorldCounts(importedWorld.getRegistryCounts());
 }).catch(error => {
 if (disposed)
 return;
+worldEffects?.dispose();
+worldEffects = null;
 importedWorld?.dispose();
 importedWorld = null;
 areaLoader.cancel();
@@ -336,6 +276,8 @@ const delta = Math.min((now - lastTime) / 1000, 0.1);
 lastTime = now;
 animId = requestAnimationFrame(animate);
 if (isMenuOpenRef.current) {
+worldEffects?.update(delta, camera.position);
+skyCycle.update(delta, camera.position);
 lastTime = performance.now();
 renderer.render(scene, camera);
 return;
@@ -375,7 +317,8 @@ importedWorld.update(delta, camera.position);
 camera.position.copy(importedWorld.movePlayer(camera.position, candidatePos));
 cameraPosRef.current = { x: camera.position.x, y: camera.position.y, z: camera.position.z };
 }
-starField.rotation.y += delta * .006;
+worldEffects?.update(delta, camera.position);
+skyCycle.update(delta, camera.position);
 renderer.render(scene, camera);
 };
 animate();
@@ -395,11 +338,11 @@ disposed = true;
 cancelAnimationFrame(animId);
 unlock();
 requestCaptureRef.current = () => { };
+worldEffects?.dispose();
+worldEffects = null;
 importedWorld?.dispose();
 areaLoader.cancel();
-starGeo.dispose();
-starMat.dispose();
-starDiscTex.dispose();
+skyCycle.dispose();
 renderer.dispose();
 document.removeEventListener("visibilitychange", handleVisibilityReset);
 window.removeEventListener("focus", handleVisibilityReset);

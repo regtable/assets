@@ -70,6 +70,7 @@ export class ImportedWorld {
  private colliders: ColliderData[] = [];
  private triggers: TriggerData[] = [];
  private mixers: THREE.AnimationMixer[] = [];
+ private autoDoors = new Map<string,{base:THREE.Quaternion;axis:THREE.Vector3;angle:number;away:number}>();
  private spawnPosition: THREE.Vector3 | null = null;
  private raycaster = new THREE.Raycaster();
  private isWorldReady = false;
@@ -246,6 +247,11 @@ export class ImportedWorld {
  };
 
  this.doorsMap.set(doorData.id, doorData);
+ if(typeof userData.autoOpenRadius==='number'){
+ const parentQ=node.parent?.getWorldQuaternion(new THREE.Quaternion())||new THREE.Quaternion();
+ this.autoDoors.set(doorData.id,{base:node.quaternion.clone(),axis:new THREE.Vector3(0,1,0).applyQuaternion(parentQ.invert()),angle:userData.autoDoorPositiveAngle||Math.PI/1.8,away:0});
+ if(action)action.enabled=false;
+ }
  this.doorMeshToData.set(node, doorData);
 
  node.traverse((child) => {
@@ -382,6 +388,32 @@ export class ImportedWorld {
  if (!this.isWorldReady) return;
 
  for (const door of this.doorsMap.values()) {
+ const data = door.pivotMesh.userData;
+ const auto = typeof data.autoOpenRadius === "number" && playerPosition;
+ let state = this.autoDoors.get(door.id);
+ if (auto) {
+ if (!state) continue;
+ const centre = door.pivotMesh.getWorldPosition(new THREE.Vector3());
+ const peer = this.doorsMap.get(data.autoDoorPeer);
+ if (peer) centre.add(peer.pivotMesh.getWorldPosition(new THREE.Vector3())).multiplyScalar(0.5);
+ const distance = Math.hypot(playerPosition.x - centre.x, playerPosition.z - centre.z);
+ if (distance <= data.autoOpenRadius) {
+ if (door.currentProgress < 0.001) {
+ const side =
+ data.autoDoorAxis === "x" ? playerPosition.x - centre.x : playerPosition.z - centre.z;
+ state.angle = (side >= 0 ? 1 : -1) * (data.autoDoorPositiveAngle || Math.PI / 1.8);
+ }
+ state.away = 0;
+ door.isOpen = true;
+ door.targetProgress = 1;
+ } else if (distance >= (data.autoCloseRadius || data.autoOpenRadius + 1)) {
+ state.away += dt;
+ if (state.away >= (data.autoCloseDelay || 1.5)) {
+ door.isOpen = false;
+ door.targetProgress = 0;
+ }
+ } else state.away = 0;
+ }
  const autoClose = door.pivotMesh.userData.autoCloseDistance;
  if (
  playerPosition &&
@@ -402,7 +434,11 @@ export class ImportedWorld {
  door.currentProgress = Math.max(0.0, door.currentProgress - step);
  }
 
- if (door.action && door.mixer) {
+ if (state) {
+ door.pivotMesh.quaternion
+ .copy(new THREE.Quaternion().setFromAxisAngle(state.axis, state.angle * door.currentProgress))
+ .multiply(state.base);
+ } else if (door.action && door.mixer) {
  const currentTime = THREE.MathUtils.lerp(
  door.closedTime,
  door.openTime,
@@ -556,6 +592,7 @@ export class ImportedWorld {
  this.mixers = [];
  this.binsMap.clear();
  this.doorsMap.clear();
+ this.autoDoors.clear();
  this.doorMeshToData.clear();
  this.actionsMap.clear();
  this.colliders = [];

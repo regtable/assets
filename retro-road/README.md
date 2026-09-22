@@ -66,7 +66,7 @@ All 32 imported Blender bin hierarchies now belong to AREA__crate_digger_record_
 
 NOTICE__eviction uses the supplied artwork unchanged and packed into the garage GLB. Its authored location is on the street-facing surface of the old shop entrance. The attachTo=mainDoorPivotL custom property attaches it to that door after all areas load, preserving world position. It follows the door in the game and does not prevent door clicking. The notice is kept at its original image resolution by the optimizer for text readability.
 
-The current manifest uses four versioned v3 GLBs, including a dedicated backroom_v3.glb. Earlier exports and the older GLB-test root manifest remain unchanged. Do not run the old relocation preparation scripts again. Edit the current Blender master and use the export helper for subsequent changes.
+The current manifest uses existing_shop_v3.glb, street_v3.glb, backroom_v3.glb and crate_digger_record_shop_v4.glb. The garage v4 adds the visible porch lamp above the carrot. Earlier exports and the older GLB-test root manifest remain unchanged. Do not run the old relocation preparation scripts again. Edit the current Blender master and use the export helper for subsequent changes.
 
 ## Fixture lighting, fans and the carrot
 
@@ -76,6 +76,12 @@ Name an emitting mesh or parent LIGHT_your_name. Use Principled BSDF Emission Co
 
 Optional custom properties: lightType="spot" or "point" (default); lightRange=30 metres (0 unlimited); lightDirection=[0,-1,0]; lightOffset=[0,0,0]; lightAngle=1.25 radians; lightCastsShadow=true for spots. Direction and offset use GAME world axes. Place the light origin just outside the emitter to prevent self-shadow. Materials alone do not illuminate nearby objects in Three.js; worldEffects.ts supplies that behavior.
 
-Phone budget: nearest 6 fixtures, one 512px spotlight shadow map updated at 5 Hz. Desktop: nearest 8 fixtures and two shadow maps. Point lights do not cast shadows. Unshadowed lights can leak through partitions; this is a deliberate performance limit, not baked global illumination. Retest the latest lighting update on the physical iPhone.
+Fixture budget on phones: nearest 6 fixtures, one 512px spotlight shadow map updated at 5 Hz. Desktop: nearest 8 fixtures and two fixture shadow maps. The sky adds one directional shadow map (512px phone, 1024px desktop). Point lights do not cast shadows. Unshadowed lights can leak through partitions; this is a deliberate performance limit, not baked global illumination. Retest the latest lighting update on the physical iPhone.
 
 For a looping animation, add loopAnimation="ExactClipName" to its root and export that animation. Six existing fan roots already have this property. Do not set it on manually controlled door clips. Keep moving geometry parented to its animated root.
+
+## Sky and day/night cycle
+
+The physical sky dome, sun, moon and 850 stars are created by runtime/skyCycle.ts. They follow the camera without collision and need no large sky textures. Do not include another sky dome in each area GLB. The sun and moon share one directional light/shadow map; stars fade at dawn. A low hemisphere contribution represents diffuse sky illumination so surfaces facing away from the moon remain readable. This contribution is a simple global approximation and is not occluded indoors; installed lights still provide the main interior lighting.
+
+SKY_CONFIG at the top of skyCycle.ts controls dayLengthSeconds (1200 = 20 real minutes for one full day), startHour (21 = 9 pm on load), sunIntensity, moonIntensity, nightSkyFill and daySkyFill. The cycle advances while the scene renders, pauses effectively when the tab is inactive, and restarts from startHour on reload. It is a stylized local cycle, not real-world astronomy or synchronized multiplayer time. Sky code changes must go through the Flow editor prompt, while building/fixture changes use Blender and the manifest.
