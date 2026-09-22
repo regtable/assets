@@ -23,11 +23,11 @@
     },
     {
       "id": "backroom",
-      "url": "BACKROOM.glb",
+      "url": "backroom.glb",
       "position": [
-        22,
         0,
-        -46
+        0,
+        0
       ],
       "rotation": [
         0,
