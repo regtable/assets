@@ -1,0 +1,55 @@
+{
+  "counts": {
+    "bins": 32,
+    "doors": 21,
+    "colliders": 349,
+    "triggers": 34,
+    "actions": 29
+  },
+  "spawn": [
+    -50,
+    1.600000023841858,
+    2
+  ],
+  "checks": "spawn, wall, store doors, record bin, garage passage and trigger, phone, action hierarchy",
+  "relocatedBins": [
+    "era_80s",
+    "era_90s",
+    "era_2000s",
+    "era_2010s",
+    "era_2020s",
+    "era_future",
+    "genre_afrobeat",
+    "genre_ambient",
+    "genre_chiptune",
+    "genre_country",
+    "genre_disco",
+    "genre_dnb",
+    "genre_dubstep",
+    "genre_emo",
+    "genre_funk",
+    "genre_grunge",
+    "genre_hiphop",
+    "genre_house",
+    "genre_hyperpop",
+    "genre_industrial",
+    "genre_jazz",
+    "genre_lofi",
+    "genre_metal",
+    "genre_postrock",
+    "genre_punk",
+    "genre_reggaeton",
+    "genre_shoegaze",
+    "genre_ska",
+    "genre_synthwave",
+    "genre_techno",
+    "genre_trip-hop",
+    "genre_vaporwave"
+  ],
+  "notice": {
+    "facing": "street",
+    "attachment": "mainDoorPivotL",
+    "owner": "garage",
+    "clickPassesToDoor": true
+  }
+}

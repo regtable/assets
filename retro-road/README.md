@@ -59,3 +59,11 @@ Radio metadata currently opens the existing radio interface. Automatic shop play
 Use the optimizer after each raw export. It preserves names, extras, animation and hierarchy; resizes most images to at most 1024, bin banners to 512, and the existing road texture to 2048; keeps transparent images as PNG and opaque images as JPEG; and deduplicates data. Share materials and images where possible. Do not add large unique textures to every crate.
 
 Small download size alone does not imply small GPU memory. Keep total loaded texture dimensions, geometry and draw calls modest. The scene caps coarse-pointer rendering at 1.25 device-pixel ratio without antialiasing. Test actual iPhone browsers after adding assets; there is no universal guaranteed safe GLB size.
+
+## Current crate and notice setup
+
+All 32 bins now live in the garage collection, scattered with a clear central access route. Move each record_bin parent together with its children. The old shop export contains no bins.
+
+The supplied NOTICE__eviction mesh is owned by the garage export but has attachTo=mainDoorPivotL. On load, the runtime reparents it to the named door while preserving world placement, so it follows the door. Keep target object names unique across enabled areas. Missing, ambiguous or cyclic attachment targets hide the attachment rather than leave it floating. The notice remains at its authored world location in the Blender collection; the cross-area attachment is resolved by the game.
+
+The optimizer retains this notice at its original 941 x 1672 resolution to keep its text readable. Both iPhone orientations and gyro were confirmed working by the user before this asset revision.

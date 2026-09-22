@@ -331,6 +331,32 @@ export class ImportedWorld {
  });
  }
 
+ // Attach assets owned by one area to a named object in another area.
+ const attachments: THREE.Object3D[] = [];
+ const namedNodes = new Map<string, THREE.Object3D[]>();
+ for (const area of this.loadedAreas) {
+ area.group.updateMatrixWorld(true);
+ area.group.traverse((node) => {
+ if (node.name) namedNodes.set(node.name, [...(namedNodes.get(node.name) || []), node]);
+ if (typeof node.userData.attachTo === "string" && node.userData.attachTo) attachments.push(node);
+ });
+ }
+ for (const node of attachments) {
+ const matches = namedNodes.get(node.userData.attachTo) || [];
+ const target = matches.length === 1 ? matches[0] : undefined;
+ let cycle = false;
+ for (let ancestor = target; ancestor; ancestor = ancestor.parent || undefined) {
+ if (ancestor === node) cycle = true;
+ }
+ if (!target || cycle) {
+ node.visible = false;
+ console.warn("Attachment target missing, ambiguous or cyclic:", node.name, node.userData.attachTo);
+ continue;
+ }
+ target.attach(node);
+ node.updateMatrixWorld(true);
+ }
+
  this.isWorldReady = true;
  }
 

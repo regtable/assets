@@ -1,0 +1,322 @@
+[
+  {
+    "binId": "era_2000s",
+    "object": "record_bin__era_2000s",
+    "gamePosition": [
+      -74.88875402381399,
+      0.0,
+      15.313312577865112
+    ],
+    "yawRadians": 0.6837059068653075
+  },
+  {
+    "binId": "era_2010s",
+    "object": "record_bin__era_2010s",
+    "gamePosition": [
+      -84.89991672695935,
+      0.0,
+      34.65966066488485
+    ],
+    "yawRadians": -1.9024019255691096
+  },
+  {
+    "binId": "era_2020s",
+    "object": "record_bin__era_2020s",
+    "gamePosition": [
+      -80.69411554009989,
+      0.0,
+      17.515817152505416
+    ],
+    "yawRadians": 0.39783113865348874
+  },
+  {
+    "binId": "era_80s",
+    "object": "record_bin__era_80s",
+    "gamePosition": [
+      -88.15415123921376,
+      0.0,
+      30.131880438145622
+    ],
+    "yawRadians": 0.32232870154579496
+  },
+  {
+    "binId": "era_90s",
+    "object": "record_bin__era_90s",
+    "gamePosition": [
+      -83.89094790876462,
+      0.0,
+      14.084537769551085
+    ],
+    "yawRadians": -1.8821331181269736
+  },
+  {
+    "binId": "era_future",
+    "object": "record_bin__era_future",
+    "gamePosition": [
+      -89.67249288393776,
+      0.0,
+      6.617366945041361
+    ],
+    "yawRadians": -0.8551445016945678
+  },
+  {
+    "binId": "genre_afrobeat",
+    "object": "record_bin__genre_afrobeat",
+    "gamePosition": [
+      -80.2683219885714,
+      0.0,
+      10.581837531606164
+    ],
+    "yawRadians": 3.1095887243879567
+  },
+  {
+    "binId": "genre_ambient",
+    "object": "record_bin__genre_ambient",
+    "gamePosition": [
+      -68.14726872018568,
+      0.0,
+      3.8103000315814812
+    ],
+    "yawRadians": 0.2255457485570993
+  },
+  {
+    "binId": "genre_chiptune",
+    "object": "record_bin__genre_chiptune",
+    "gamePosition": [
+      -70.87091389737986,
+      0.0,
+      23.350513824776378
+    ],
+    "yawRadians": -0.5914629313124244
+  },
+  {
+    "binId": "genre_country",
+    "object": "record_bin__genre_country",
+    "gamePosition": [
+      -65.78874816977,
+      0.0,
+      15.725239363368091
+    ],
+    "yawRadians": -1.7356789987560246
+  },
+  {
+    "binId": "genre_disco",
+    "object": "record_bin__genre_disco",
+    "gamePosition": [
+      -68.07920018205922,
+      0.0,
+      36.68101204191358
+    ],
+    "yawRadians": -1.4712585711485966
+  },
+  {
+    "binId": "genre_dnb",
+    "object": "record_bin__genre_dnb",
+    "gamePosition": [
+      -88.60860432909386,
+      0.0,
+      12.894204085270415
+    ],
+    "yawRadians": 1.8589931231787462
+  },
+  {
+    "binId": "genre_dubstep",
+    "object": "record_bin__genre_dubstep",
+    "gamePosition": [
+      -89.929527766705,
+      0.0,
+      17.098684359118963
+    ],
+    "yawRadians": 1.5689549970328418
+  },
+  {
+    "binId": "genre_emo",
+    "object": "record_bin__genre_emo",
+    "gamePosition": [
+      -83.02651518716861,
+      0.0,
+      27.318924175372885
+    ],
+    "yawRadians": -0.327381991710348
+  },
+  {
+    "binId": "genre_funk",
+    "object": "record_bin__genre_funk",
+    "gamePosition": [
+      -70.25071871626145,
+      0.0,
+      32.375903897015576
+    ],
+    "yawRadians": 1.6819870360650258
+  },
+  {
+    "binId": "genre_grunge",
+    "object": "record_bin__genre_grunge",
+    "gamePosition": [
+      -73.7612916924925,
+      0.0,
+      4.709514424427468
+    ],
+    "yawRadians": -0.31788587268009394
+  },
+  {
+    "binId": "genre_hiphop",
+    "object": "record_bin__genre_hiphop",
+    "gamePosition": [
+      -77.0502637881205,
+      0.0,
+      7.077839354263708
+    ],
+    "yawRadians": 1.9744189047961342
+  },
+  {
+    "binId": "genre_house",
+    "object": "record_bin__genre_house",
+    "gamePosition": [
+      -87.80581482478705,
+      0.0,
+      22.38555442217232
+    ],
+    "yawRadians": -2.3725079754794756
+  },
+  {
+    "binId": "genre_hyperpop",
+    "object": "record_bin__genre_hyperpop",
+    "gamePosition": [
+      -84.90989996080205,
+      0.0,
+      5.141372778404529
+    ],
+    "yawRadians": -2.4391315802000495
+  },
+  {
+    "binId": "genre_industrial",
+    "object": "record_bin__genre_industrial",
+    "gamePosition": [
+      -66.11805806393262,
+      0.0,
+      30.4236385629564
+    ],
+    "yawRadians": 0.5268785462511549
+  },
+  {
+    "binId": "genre_jazz",
+    "object": "record_bin__genre_jazz",
+    "gamePosition": [
+      -80.01148923351367,
+      0.0,
+      36.41619648615636
+    ],
+    "yawRadians": 1.2570414543716903
+  },
+  {
+    "binId": "genre_lofi",
+    "object": "record_bin__genre_lofi",
+    "gamePosition": [
+      -66.91684539612272,
+      0.0,
+      11.210103368241137
+    ],
+    "yawRadians": 0.1982309759353882
+  },
+  {
+    "binId": "genre_metal",
+    "object": "record_bin__genre_metal",
+    "gamePosition": [
+      -79.11079027376545,
+      0.0,
+      31.824739648215683
+    ],
+    "yawRadians": 0.2598500333301934
+  },
+  {
+    "binId": "genre_postrock",
+    "object": "record_bin__genre_postrock",
+    "gamePosition": [
+      -73.63652464321343,
+      0.0,
+      26.389934302497693
+    ],
+    "yawRadians": 0.19458559728256297
+  },
+  {
+    "binId": "genre_punk",
+    "object": "record_bin__genre_punk",
+    "gamePosition": [
+      -78.00851897099133,
+      0.0,
+      24.513793753448464
+    ],
+    "yawRadians": -2.987632821666309
+  },
+  {
+    "binId": "genre_reggaeton",
+    "object": "record_bin__genre_reggaeton",
+    "gamePosition": [
+      -74.84305026664562,
+      0.0,
+      11.127098531562488
+    ],
+    "yawRadians": 1.5269463512932917
+  },
+  {
+    "binId": "genre_shoegaze",
+    "object": "record_bin__genre_shoegaze",
+    "gamePosition": [
+      -74.97609163312798,
+      0.0,
+      32.48641836982787
+    ],
+    "yawRadians": 0.31310711899039134
+  },
+  {
+    "binId": "genre_ska",
+    "object": "record_bin__genre_ska",
+    "gamePosition": [
+      -89.71720741220084,
+      0.0,
+      35.511266368721074
+    ],
+    "yawRadians": 1.5640475250166894
+  },
+  {
+    "binId": "genre_synthwave",
+    "object": "record_bin__genre_synthwave",
+    "gamePosition": [
+      -66.40328333624953,
+      0.0,
+      23.23471919428919
+    ],
+    "yawRadians": -0.8157526564910254
+  },
+  {
+    "binId": "genre_techno",
+    "object": "record_bin__genre_techno",
+    "gamePosition": [
+      -70.5701561578917,
+      0.0,
+      16.78473447796042
+    ],
+    "yawRadians": 1.282626165243093
+  },
+  {
+    "binId": "genre_trip-hop",
+    "object": "record_bin__genre_trip-hop",
+    "gamePosition": [
+      -80.14348130722249,
+      0.0,
+      3.763159600810887
+    ],
+    "yawRadians": -2.4849066336542274
+  },
+  {
+    "binId": "genre_vaporwave",
+    "object": "record_bin__genre_vaporwave",
+    "gamePosition": [
+      -69.98148299178234,
+      0.0,
+      8.116274478909393
+    ],
+    "yawRadians": 2.351763727466647
+  }
+]

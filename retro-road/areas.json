@@ -3,7 +3,7 @@
   "areas": [
     {
       "id": "store",
-      "url": "existing_shop.glb",
+      "url": "existing_shop_v2.glb",
       "position": [
         0,
         0,
@@ -43,7 +43,7 @@
     },
     {
       "id": "crate_digger_record_shop",
-      "url": "crate_digger_record_shop.glb",
+      "url": "crate_digger_record_shop_v2.glb",
       "position": [
         0,
         0,
