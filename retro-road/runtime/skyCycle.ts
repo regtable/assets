@@ -54,10 +54,11 @@ export class SkyCycle {
   starMaterial.onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('void main() {','void main() { if(length(gl_PointCoord-vec2(0.5))>0.5) discard;');};
   this.stars=new THREE.Points(geometry,starMaterial);this.stars.name="Night starfield";this.root.add(this.stars);
   this.light.name="Sun or moon directional light";this.light.castShadow=true;
-  this.light.shadow.mapSize.set(coarse?512:1024,coarse?512:1024);
+  this.light.shadow.mapSize.set(coarse?1024:2048,coarse?1024:2048);
+  this.light.shadow.radius=coarse?3:4;this.light.shadow.blurSamples=8;
   Object.assign(this.light.shadow.camera,{left:-42,right:42,top:42,bottom:-42,near:1,far:180});
   this.light.shadow.camera.updateProjectionMatrix();
-  this.light.shadow.bias=-.0002;this.light.shadow.normalBias=.12;
+  this.light.shadow.bias=-.0002;this.light.shadow.normalBias=.06;
   this.skyFill.name="Outdoor sky illumination";
   scene.add(this.light,this.light.target,this.skyFill);
   this.update(0,new THREE.Vector3());
@@ -82,7 +83,8 @@ export class SkyCycle {
   // A single shadow-casting celestial light switches between sun and moon.
   const isDay=altitude>=0,active=isDay?'sun':'moon';
   const source=this.direction.clone().multiplyScalar(isDay?1:-1);
-  const target=new THREE.Vector3(Math.round(cameraPosition.x/4)*4,0,Math.round(cameraPosition.z/4)*4);
+  const snap=84/this.light.shadow.mapSize.x;
+  const target=new THREE.Vector3(Math.round(cameraPosition.x/snap)*snap,0,Math.round(cameraPosition.z/snap)*snap);
   this.light.position.copy(target).addScaledVector(source,85);this.light.target.position.copy(target);
   this.light.color.set(isDay?0xffedd2:0xaec9ff);
   this.light.intensity=(isDay?SKY_CONFIG.sunIntensity:SKY_CONFIG.moonIntensity)*(.25+.75*THREE.MathUtils.smoothstep(Math.abs(altitude),0,.3));

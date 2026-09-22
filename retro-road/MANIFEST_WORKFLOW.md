@@ -50,6 +50,7 @@ In Blender, select the object and open Object Properties → Custom Properties. 
 | Automatic door hinge | Existing door properties plus `autoOpenRadius`, `autoCloseRadius`, `autoCloseDelay`, `autoDoorPeer`, `autoDoorAxis`, `autoDoorPositiveAngle` | Uses a world-up hinge rotation, opens away from approach side and closes after leaving. Copy a current main/backroom/WC hinge for the complete setup. |
 | Fan/loop root | `loopAnimation="Exact exported clip name"` | Starts the named animation at load and repeats it continuously. Keep this separate from door animation metadata. |
 | Installed emitter | Name starts `LIGHT_`, Principled Emission Color/Strength | Creates a runtime point light using numeric material emission. Optional spot, range, direction, offset and shadow properties are documented in README. |
+| Room bounce volume | `role="light_volume"`, optional `bounceStrength=0.18` | Hidden box defining the room for fixture-derived diffuse indirect illumination. Custom volumes override default bounds for that area. This is a lighting helper, not a collision box. |
 
 For hinged doors, parent their collision box under the moving hinge so it moves with the door. Do not parent static walls to the hinge. Helpers may be hidden from renders but must be included in the export. Generic triggers are registered but do not invent new gameplay actions automatically.
 
