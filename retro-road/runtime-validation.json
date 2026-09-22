@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "bins": 32,
+    "doors": 21,
+    "colliders": 349,
+    "triggers": 34,
+    "actions": 29
+  },
+  "spawn": [
+    -50,
+    1.600000023841858,
+    2
+  ],
+  "checks": "spawn, wall, store doors, record bin, garage passage and trigger, phone, action hierarchy"
+}
