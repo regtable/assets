@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "bins": 32,
+    "doors": 21,
+    "colliders": 404,
+    "triggers": 34,
+    "actions": 29
+  },
+  "autoDoors": 6,
+  "loopingFans": 6,
+  "emissiveFixtures": 22,
+  "mobileLights": 6,
+  "mobileShadowMaps": 1,
+  "checks": "walls, windows, doors both sides, garage, phone, all 32 crates, relocated staff services, notice attachment, carrot clearance/collision, fan playback, fixture lighting and cleanup, all materials lit and double sided"
+}
