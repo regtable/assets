@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "areas": [
+    {
+      "id": "store",
+      "url": "existing_shop.glb",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "enabled": true
+    },
+    {
+      "id": "street",
+      "url": "street.glb",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "enabled": true
+    },
+    {
+      "id": "crate_digger_record_shop",
+      "url": "crate_digger_record_shop.glb",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "enabled": true
+    },
+    {
+      "id": "backroom",
+      "url": "../backroom.glb",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "enabled": true
+    }
+  ]
+}
