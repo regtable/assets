@@ -41,3 +41,22 @@ named pivots directly so rotor speed can follow startup and shutdown.
 
 Rebuild with `blender --background --python build_helicopter.py` and
 `node build_audio.cjs` using the generator scripts included here.
+
+## Ambulance and out-of-town tunnel
+
+`ems-ambulance.glb` is an original CC0 Blender ambulance with four named wheel
+pivots and alternating blue beacon materials. `emsService.ts` provides its
+loader, five-minute departure/return sampler, original synthesized positional
+engine/siren audio, collision bounds and the scene's east-road tunnel.
+
+The ambulance parks beside the hospital at (-46,0,22), follows the existing
+west road and 15 metre quarter-circle bend, then travels east on Z=-29. It
+enters the tunnel at X=27, disappears beyond its black exit at X=89, and returns
+along the route. Start-up takes six seconds, each drive 26 seconds, absence
+35 seconds and shutdown four seconds. Music audio is independent.
+
+The tunnel must be paired with the matching opening in the scene's east wall
+and its movement handler must run before the legacy perimeter-wall check.
+It has a 12 metre mouth and 6.2 metre elliptical crown, with player edge bounds.
+The GLB needs no external textures or compression decoder. Rebuild using
+`blender --background --python build_ambulance.py`.
