@@ -1,0 +1,14 @@
+SPDX-License-Identifier: CC0-1.0
+
+Original EMS helicopter geometry, materials, rotor animations, Blender source,
+generator scripts, original synthesized rotor-wash audio, and loader created
+for regtable on 11 October 2026.
+No third-party models, textures, fonts, or manufacturer logos were imported.
+The lettering uses Blender's bundled Bfont converted to mesh.
+
+To the extent possible under law, the creator waives copyright and related
+rights in these original assets under CC0 1.0 Universal.
+You may copy, modify, distribute and use these assets, including commercially,
+without attribution. Provided as-is, without warranty.
+
+CC0 legal text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
