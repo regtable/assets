@@ -80,6 +80,7 @@ export function createEMSHelicopter(options: { position?: THREE.Vector3; url?: s
     options.camera!.add(listener); group.add(sound);
     sound.setRefDistance(12); sound.setRolloffFactor(1.6); sound.setMaxDistance(240);
     sound.setDistanceModel("inverse"); sound.setLoop(true); sound.setVolume(0);
+    sound.gain.gain.setValueAtTime(0, listener.context.currentTime);
     const tryPlay = () => { if (audioUnlocked && sound.buffer && !sound.isPlaying && status !== "disposed") sound.play(); };
     const unlock = () => { listener.context.resume().then(() => { audioUnlocked = true; tryPlay(); }).catch(() => {}); };
     window.addEventListener("pointerdown", unlock); window.addEventListener("keydown", unlock);
