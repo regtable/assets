@@ -26,9 +26,13 @@ export function createEMSTunnel(brick:THREE.Material){
   const wallMat=brick.clone();wallMat.side=THREE.DoubleSide;if((wallMat as THREE.MeshBasicMaterial).color)(wallMat as THREE.MeshBasicMaterial).color.set(0x89929c);
   const road=new THREE.MeshStandardMaterial({color:0x222831,roughness:.94});const gold=new THREE.MeshBasicMaterial({color:0xeab308});const metal=new THREE.MeshStandardMaterial({color:0x263238,metalness:.5,roughness:.6});const glow=new THREE.MeshBasicMaterial({color:0xffedc4});
   const geometries:THREE.BufferGeometry[]=[];
-  const box=(x:number,y:number,z:number,w:number,h:number,d:number,material:THREE.Material)=>{const geo=new THREE.BoxGeometry(w,h,d);geometries.push(geo);const m=new THREE.Mesh(geo,material);m.position.set(x,y,z);group.add(m);return m;};
+  const box=(x:number,y:number,z:number,w:number,h:number,d:number,material:THREE.Material)=>{const geo=new THREE.BoxGeometry(w,h,d);
+    if(material===wallMat){const p=geo.attributes.position,n=geo.attributes.normal,uv=geo.attributes.uv;for(let i=0;i<p.count;i++){const wx=x+p.getX(i),wy=y+p.getY(i),wz=z+p.getZ(i);uv.setXY(i,Math.abs(n.getX(i))>.5?(wz+80)/12:(wx+93)/12,Math.abs(n.getY(i))>.5?(wz+80)/12:wy/12);}uv.needsUpdate=true;}
+    geometries.push(geo);const m=new THREE.Mesh(geo,material);m.position.set(x,y,z);group.add(m);return m;};
   box(58,.002,-29,62,.018,12,road);box(58,1.7,-35.12,62,3.4,.24,wallMat);box(58,1.7,-22.88,62,3.4,.24,wallMat);
-  const roof=new THREE.CylinderGeometry(6,6,62,32,1,true,0,Math.PI);roof.rotateZ(Math.PI/2);roof.scale(1,2.8/6,1);geometries.push(roof);const arch=new THREE.Mesh(roof,wallMat);arch.position.set(58,3.4,-29);group.add(arch);
+  const roof=new THREE.CylinderGeometry(6,6,62,32,1,true,0,Math.PI);roof.rotateZ(Math.PI/2);roof.scale(1,2.8/6,1);
+  const rp=roof.attributes.position,ruv=roof.attributes.uv;for(let i=0;i<rp.count;i++)ruv.setXY(i,(rp.getX(i)+151)/12,Math.atan2(rp.getY(i)/2.8,rp.getZ(i)/6)*6/12);ruv.needsUpdate=true;
+  geometries.push(roof);const arch=new THREE.Mesh(roof,wallMat);arch.position.set(58,3.4,-29);group.add(arch);
   for(const z of [-29.16,-28.84])box(58,.019,z,62,.018,.055,gold);
   for(const x of [28,38,49,60,71,82]){box(x,5.65,-29,.8,.12,.5,metal);box(x,5.56,-29,.6,.03,.35,glow);}
   const black=new THREE.MeshBasicMaterial({color:0x020304});box(89,3.2,-29,.14,6.4,12,black);
