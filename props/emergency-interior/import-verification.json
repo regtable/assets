@@ -1,0 +1,8 @@
+{
+  "glb_import": "passed",
+  "pole_opening": "clear",
+  "stair_opening": "clear",
+  "upper_floor_height": 6,
+  "door_hinges": 5,
+  "runtime_collision": "not integrated"
+}

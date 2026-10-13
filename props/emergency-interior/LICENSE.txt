@@ -1,0 +1,13 @@
+SPDX-License-Identifier: CC0-1.0
+
+Original Retro Road hospital/fire-station geometry, procedural materials,
+door actions, Blender source, generator and preview renders created for
+regtable on 13 October 2026. No external models or textures were imported.
+Blender's bundled Bfont supplies the mesh lettering.
+
+To the extent possible under law, the creator waives copyright and related
+rights in these original assets under CC0 1.0 Universal. You may use, modify
+and distribute them, including commercially, without attribution.
+Provided as-is, without warranty.
+
+CC0 legal text: https://creativecommons.org/publicdomain/zero/1.0/legalcode

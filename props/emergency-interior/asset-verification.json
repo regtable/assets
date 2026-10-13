@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "assets": [
+    {
+      "file": "hospital-fire-station.glb",
+      "bytes": 10433424,
+      "meshes": 58,
+      "primitives": 58,
+      "triangles": 170204,
+      "clips": [
+        "CrewDorm_Open",
+        "Dispatch_Open",
+        "Exam_A_Open",
+        "Exam_B_Open",
+        "Treatment_Open"
+      ]
+    },
+    {
+      "file": "hospital-ground.glb",
+      "bytes": 5138584,
+      "meshes": 29,
+      "primitives": 29,
+      "triangles": 86120,
+      "clips": [
+        "Exam_A_Open",
+        "Exam_B_Open",
+        "Treatment_Open"
+      ]
+    },
+    {
+      "file": "fire-station-upper.glb",
+      "bytes": 4014588,
+      "meshes": 24,
+      "primitives": 24,
+      "triangles": 62784,
+      "clips": [
+        "CrewDorm_Open",
+        "Dispatch_Open"
+      ]
+    },
+    {
+      "file": "stairs-and-pole.glb",
+      "bytes": 1290360,
+      "meshes": 5,
+      "primitives": 5,
+      "triangles": 21300,
+      "clips": []
+    }
+  ],
+  "placementChecks": "dimensions, door counts, stair rises and pole near rear exit",
+  "runtimeIntegration": "not performed"
+}

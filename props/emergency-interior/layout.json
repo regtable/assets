@@ -1,0 +1,1544 @@
+{
+  "license": "CC0-1.0",
+  "units": "metres",
+  "placement_world": [
+    -73,
+    0,
+    20
+  ],
+  "gltf_axes": "X east, Y up, Z south",
+  "footprint_local": {
+    "min": [
+      -20,
+      0,
+      -20
+    ],
+    "max": [
+      20,
+      12,
+      20
+    ]
+  },
+  "upper_floor_y": 6,
+  "front_door_world": [
+    -53,
+    0,
+    30
+  ],
+  "rear_door_world": [
+    -83,
+    0,
+    0
+  ],
+  "pole": {
+    "node": "FirePole_Gold",
+    "local": [
+      -8,
+      0,
+      -15
+    ],
+    "world": [
+      -81,
+      0,
+      5
+    ],
+    "hole_radius": 1.02,
+    "entry_upper_y": 6,
+    "landing_y": 0,
+    "drop_is_runtime_behavior": true
+  },
+  "stairs": {
+    "risers": 36,
+    "riser_height": 0.16666666666666666,
+    "going": 0.3,
+    "width": 2.4,
+    "treads": [
+      {
+        "center": [
+          11.4,
+          0.16666666666666666,
+          -5.45
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          0.3333333333333333,
+          -5.75
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          0.5,
+          -6.05
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          0.6666666666666666,
+          -6.35
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          0.8333333333333334,
+          -6.6499999999999995
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          1,
+          -6.949999999999999
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          1.1666666666666667,
+          -7.25
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          1.3333333333333333,
+          -7.55
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          1.5,
+          -7.85
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          1.6666666666666667,
+          -8.15
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          1.8333333333333333,
+          -8.45
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          2,
+          -8.75
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          2.1666666666666665,
+          -9.05
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          2.3333333333333335,
+          -9.35
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          2.5,
+          -9.649999999999999
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          2.6666666666666665,
+          -9.95
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          2.8333333333333335,
+          -10.25
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          11.4,
+          3,
+          -10.55
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 0
+      },
+      {
+        "center": [
+          15,
+          3.1666666666666665,
+          -10.549999999999999
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          3.3333333333333335,
+          -10.25
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          3.5,
+          -9.95
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          3.6666666666666665,
+          -9.649999999999999
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          3.8333333333333335,
+          -9.35
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          4,
+          -9.049999999999999
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          4.166666666666667,
+          -8.75
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          4.333333333333333,
+          -8.45
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          4.5,
+          -8.149999999999999
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          4.666666666666667,
+          -7.85
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          4.833333333333333,
+          -7.549999999999999
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          5,
+          -7.25
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          5.166666666666666,
+          -6.949999999999999
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          5.333333333333334,
+          -6.6499999999999995
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          5.5,
+          -6.35
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          5.666666666666666,
+          -6.05
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          5.833333333333334,
+          -5.749999999999999
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      },
+      {
+        "center": [
+          15,
+          6,
+          -5.449999999999999
+        ],
+        "size": [
+          2.4,
+          0.3
+        ],
+        "flight": 1
+      }
+    ],
+    "half_landing": {
+      "center": [
+        13.2,
+        3,
+        -11.925
+      ],
+      "size": [
+        6,
+        2.45
+      ]
+    },
+    "top_threshold": {
+      "center": [
+        15,
+        6,
+        -5.15
+      ],
+      "size": [
+        2.4,
+        0.3
+      ]
+    }
+  },
+  "doors": [
+    {
+      "node": "Exam_A_Hinge",
+      "clip": "Exam_A_Open",
+      "hinge": [
+        -12.75,
+        0,
+        17.5
+      ],
+      "width": 1.5,
+      "height": 2.8
+    },
+    {
+      "node": "Exam_B_Hinge",
+      "clip": "Exam_B_Open",
+      "hinge": [
+        -12.75,
+        0,
+        4.5
+      ],
+      "width": 1.5,
+      "height": 2.8
+    },
+    {
+      "node": "Treatment_Hinge",
+      "clip": "Treatment_Open",
+      "hinge": [
+        0.25,
+        0,
+        -3.5
+      ],
+      "width": 1.5,
+      "height": 2.8
+    },
+    {
+      "node": "CrewDorm_Hinge",
+      "clip": "CrewDorm_Open",
+      "hinge": [
+        -12.75,
+        6,
+        5
+      ],
+      "width": 1.5,
+      "height": 2.8
+    },
+    {
+      "node": "Dispatch_Hinge",
+      "clip": "Dispatch_Open",
+      "hinge": [
+        13.25,
+        6,
+        17
+      ],
+      "width": 1.5,
+      "height": 2.8
+    }
+  ],
+  "static_boxes": [
+    {
+      "name": "Reception island",
+      "group": "Hospital_Ground",
+      "center": [
+        9,
+        0.62,
+        9
+      ],
+      "size": [
+        5.4,
+        1.24,
+        1.7
+      ]
+    },
+    {
+      "name": "Reception rear screen",
+      "group": "Hospital_Ground",
+      "center": [
+        9,
+        1.6,
+        5
+      ],
+      "size": [
+        7,
+        3.2,
+        0.2
+      ]
+    },
+    {
+      "name": "Exam_A_West",
+      "group": "Hospital_Ground",
+      "center": [
+        -18.5,
+        2,
+        12
+      ],
+      "size": [
+        0.16,
+        4,
+        11
+      ]
+    },
+    {
+      "name": "Exam_A_East",
+      "group": "Hospital_Ground",
+      "center": [
+        -5.5,
+        2,
+        12
+      ],
+      "size": [
+        0.16,
+        4,
+        11
+      ]
+    },
+    {
+      "name": "Exam_A_North",
+      "group": "Hospital_Ground",
+      "center": [
+        -12,
+        2,
+        6.5
+      ],
+      "size": [
+        13,
+        4,
+        0.16
+      ]
+    },
+    {
+      "name": "Exam_A_South",
+      "group": "Hospital_Ground",
+      "center": [
+        -15.675,
+        2,
+        17.5
+      ],
+      "size": [
+        5.65,
+        4,
+        0.16
+      ]
+    },
+    {
+      "name": "Exam_A_South",
+      "group": "Hospital_Ground",
+      "center": [
+        -8.325,
+        2,
+        17.5
+      ],
+      "size": [
+        5.65,
+        4,
+        0.16
+      ]
+    },
+    {
+      "name": "Exam_A_PatientBed_Base",
+      "group": "Hospital_Ground",
+      "center": [
+        -13,
+        0.64,
+        11
+      ],
+      "size": [
+        1.25,
+        0.18,
+        2.15
+      ]
+    },
+    {
+      "name": "Exam_A_PatientBed_MonitorStand",
+      "group": "Hospital_Ground",
+      "center": [
+        -13.94,
+        0.65,
+        10.35
+      ],
+      "size": [
+        0.52,
+        1.3,
+        0.5
+      ]
+    },
+    {
+      "name": "Exam_A_Handwash",
+      "group": "Hospital_Ground",
+      "center": [
+        -6.6,
+        0.45,
+        7
+      ],
+      "size": [
+        1.6,
+        0.9,
+        0.6
+      ]
+    },
+    {
+      "name": "Exam_A_Supplies",
+      "group": "Hospital_Ground",
+      "center": [
+        -16.5,
+        0.825,
+        7
+      ],
+      "size": [
+        2.4,
+        1.65,
+        0.6
+      ]
+    },
+    {
+      "name": "Exam_B_West",
+      "group": "Hospital_Ground",
+      "center": [
+        -18.5,
+        2,
+        -1
+      ],
+      "size": [
+        0.16,
+        4,
+        11
+      ]
+    },
+    {
+      "name": "Exam_B_East",
+      "group": "Hospital_Ground",
+      "center": [
+        -5.5,
+        2,
+        -1
+      ],
+      "size": [
+        0.16,
+        4,
+        11
+      ]
+    },
+    {
+      "name": "Exam_B_North",
+      "group": "Hospital_Ground",
+      "center": [
+        -12,
+        2,
+        -6.5
+      ],
+      "size": [
+        13,
+        4,
+        0.16
+      ]
+    },
+    {
+      "name": "Exam_B_South",
+      "group": "Hospital_Ground",
+      "center": [
+        -15.675,
+        2,
+        4.5
+      ],
+      "size": [
+        5.65,
+        4,
+        0.16
+      ]
+    },
+    {
+      "name": "Exam_B_South",
+      "group": "Hospital_Ground",
+      "center": [
+        -8.325,
+        2,
+        4.5
+      ],
+      "size": [
+        5.65,
+        4,
+        0.16
+      ]
+    },
+    {
+      "name": "Exam_B_PatientBed_Base",
+      "group": "Hospital_Ground",
+      "center": [
+        -13,
+        0.64,
+        -2
+      ],
+      "size": [
+        1.25,
+        0.18,
+        2.15
+      ]
+    },
+    {
+      "name": "Exam_B_PatientBed_MonitorStand",
+      "group": "Hospital_Ground",
+      "center": [
+        -13.94,
+        0.65,
+        -2.65
+      ],
+      "size": [
+        0.52,
+        1.3,
+        0.5
+      ]
+    },
+    {
+      "name": "Exam_B_Handwash",
+      "group": "Hospital_Ground",
+      "center": [
+        -6.6,
+        0.45,
+        -6
+      ],
+      "size": [
+        1.6,
+        0.9,
+        0.6
+      ]
+    },
+    {
+      "name": "Exam_B_Supplies",
+      "group": "Hospital_Ground",
+      "center": [
+        -16.5,
+        0.825,
+        -6
+      ],
+      "size": [
+        2.4,
+        1.65,
+        0.6
+      ]
+    },
+    {
+      "name": "Treatment_West",
+      "group": "Hospital_Ground",
+      "center": [
+        -4,
+        2,
+        -9
+      ],
+      "size": [
+        0.16,
+        4,
+        11
+      ]
+    },
+    {
+      "name": "Treatment_East",
+      "group": "Hospital_Ground",
+      "center": [
+        6,
+        2,
+        -9
+      ],
+      "size": [
+        0.16,
+        4,
+        11
+      ]
+    },
+    {
+      "name": "Treatment_North",
+      "group": "Hospital_Ground",
+      "center": [
+        1,
+        2,
+        -14.5
+      ],
+      "size": [
+        10,
+        4,
+        0.16
+      ]
+    },
+    {
+      "name": "Treatment_South",
+      "group": "Hospital_Ground",
+      "center": [
+        -1.9250000000000003,
+        2,
+        -3.5
+      ],
+      "size": [
+        4.15,
+        4,
+        0.16
+      ]
+    },
+    {
+      "name": "Treatment_South",
+      "group": "Hospital_Ground",
+      "center": [
+        3.9250000000000003,
+        2,
+        -3.5
+      ],
+      "size": [
+        4.15,
+        4,
+        0.16
+      ]
+    },
+    {
+      "name": "Treatment_PatientBed_Base",
+      "group": "Hospital_Ground",
+      "center": [
+        0,
+        0.64,
+        -10
+      ],
+      "size": [
+        1.25,
+        0.18,
+        2.15
+      ]
+    },
+    {
+      "name": "Treatment_PatientBed_MonitorStand",
+      "group": "Hospital_Ground",
+      "center": [
+        -0.94,
+        0.65,
+        -10.65
+      ],
+      "size": [
+        0.52,
+        1.3,
+        0.5
+      ]
+    },
+    {
+      "name": "Treatment_Handwash",
+      "group": "Hospital_Ground",
+      "center": [
+        4.9,
+        0.45,
+        -14
+      ],
+      "size": [
+        1.6,
+        0.9,
+        0.6
+      ]
+    },
+    {
+      "name": "Treatment_Supplies",
+      "group": "Hospital_Ground",
+      "center": [
+        -2,
+        0.825,
+        -14
+      ],
+      "size": [
+        2.4,
+        1.65,
+        0.6
+      ]
+    },
+    {
+      "name": "Nursing station",
+      "group": "Hospital_Ground",
+      "center": [
+        -1,
+        0.45,
+        2
+      ],
+      "size": [
+        4,
+        0.9,
+        0.6
+      ]
+    },
+    {
+      "name": "Transport stretcher_Base",
+      "group": "Hospital_Ground",
+      "center": [
+        14,
+        0.64,
+        1
+      ],
+      "size": [
+        0.85,
+        0.18,
+        2.15
+      ]
+    },
+    {
+      "name": "Rear clinical storage",
+      "group": "Hospital_Ground",
+      "center": [
+        -16,
+        0.9,
+        -17
+      ],
+      "size": [
+        2.4,
+        1.8,
+        0.6
+      ]
+    },
+    {
+      "name": "Rear clinical storage",
+      "group": "Hospital_Ground",
+      "center": [
+        -13,
+        0.9,
+        -17
+      ],
+      "size": [
+        2.4,
+        1.8,
+        0.6
+      ]
+    },
+    {
+      "name": "Station kitchen",
+      "group": "FireStation_Upper",
+      "center": [
+        -16,
+        6.45,
+        18.5
+      ],
+      "size": [
+        2.8,
+        0.9,
+        0.6
+      ]
+    },
+    {
+      "name": "Station kitchen",
+      "group": "FireStation_Upper",
+      "center": [
+        -13,
+        6.45,
+        18.5
+      ],
+      "size": [
+        2.8,
+        0.9,
+        0.6
+      ]
+    },
+    {
+      "name": "Station kitchen",
+      "group": "FireStation_Upper",
+      "center": [
+        -10,
+        6.45,
+        18.5
+      ],
+      "size": [
+        2.8,
+        0.9,
+        0.6
+      ]
+    },
+    {
+      "name": "Station kitchen",
+      "group": "FireStation_Upper",
+      "center": [
+        -7,
+        6.45,
+        18.5
+      ],
+      "size": [
+        2.8,
+        0.9,
+        0.6
+      ]
+    },
+    {
+      "name": "Kitchen sink",
+      "group": "FireStation_Upper",
+      "center": [
+        -16,
+        6.45,
+        18.5
+      ],
+      "size": [
+        1.6,
+        0.9,
+        0.6
+      ]
+    },
+    {
+      "name": "Fridge",
+      "group": "FireStation_Upper",
+      "center": [
+        -3.7,
+        7.05,
+        18.5
+      ],
+      "size": [
+        1.05,
+        2.1,
+        0.8
+      ]
+    },
+    {
+      "name": "Mess table",
+      "group": "FireStation_Upper",
+      "center": [
+        -11,
+        6.78,
+        12.5
+      ],
+      "size": [
+        4,
+        0.12,
+        1.5
+      ]
+    },
+    {
+      "name": "Crew sofa base",
+      "group": "FireStation_Upper",
+      "center": [
+        -0.8,
+        6.35,
+        11
+      ],
+      "size": [
+        2.65,
+        0.42,
+        1
+      ]
+    },
+    {
+      "name": "Crew sofa base",
+      "group": "FireStation_Upper",
+      "center": [
+        2.2,
+        6.35,
+        11
+      ],
+      "size": [
+        2.65,
+        0.42,
+        1
+      ]
+    },
+    {
+      "name": "Briefing partition",
+      "group": "FireStation_Upper",
+      "center": [
+        1,
+        7.55,
+        8
+      ],
+      "size": [
+        7,
+        3.1,
+        0.16
+      ]
+    },
+    {
+      "name": "CrewDorm_West",
+      "group": "FireStation_Upper",
+      "center": [
+        -18.5,
+        8,
+        -1
+      ],
+      "size": [
+        0.16,
+        4,
+        12
+      ]
+    },
+    {
+      "name": "CrewDorm_East",
+      "group": "FireStation_Upper",
+      "center": [
+        -5.5,
+        8,
+        -1
+      ],
+      "size": [
+        0.16,
+        4,
+        12
+      ]
+    },
+    {
+      "name": "CrewDorm_North",
+      "group": "FireStation_Upper",
+      "center": [
+        -12,
+        8,
+        -7
+      ],
+      "size": [
+        13,
+        4,
+        0.16
+      ]
+    },
+    {
+      "name": "CrewDorm_South",
+      "group": "FireStation_Upper",
+      "center": [
+        -15.675,
+        8,
+        5
+      ],
+      "size": [
+        5.65,
+        4,
+        0.16
+      ]
+    },
+    {
+      "name": "CrewDorm_South",
+      "group": "FireStation_Upper",
+      "center": [
+        -8.325,
+        8,
+        5
+      ],
+      "size": [
+        5.65,
+        4,
+        0.16
+      ]
+    },
+    {
+      "name": "Crew bed frame",
+      "group": "FireStation_Upper",
+      "center": [
+        -16,
+        6.3,
+        2
+      ],
+      "size": [
+        1.35,
+        0.25,
+        2.25
+      ]
+    },
+    {
+      "name": "Crew bed frame",
+      "group": "FireStation_Upper",
+      "center": [
+        -16,
+        6.3,
+        -3
+      ],
+      "size": [
+        1.35,
+        0.25,
+        2.25
+      ]
+    },
+    {
+      "name": "Crew bed frame",
+      "group": "FireStation_Upper",
+      "center": [
+        -12,
+        6.3,
+        2
+      ],
+      "size": [
+        1.35,
+        0.25,
+        2.25
+      ]
+    },
+    {
+      "name": "Crew bed frame",
+      "group": "FireStation_Upper",
+      "center": [
+        -12,
+        6.3,
+        -3
+      ],
+      "size": [
+        1.35,
+        0.25,
+        2.25
+      ]
+    },
+    {
+      "name": "Crew bed frame",
+      "group": "FireStation_Upper",
+      "center": [
+        -8,
+        6.3,
+        2
+      ],
+      "size": [
+        1.35,
+        0.25,
+        2.25
+      ]
+    },
+    {
+      "name": "Crew bed frame",
+      "group": "FireStation_Upper",
+      "center": [
+        -8,
+        6.3,
+        -3
+      ],
+      "size": [
+        1.35,
+        0.25,
+        2.25
+      ]
+    },
+    {
+      "name": "Dispatch_West",
+      "group": "FireStation_Upper",
+      "center": [
+        9,
+        8,
+        12
+      ],
+      "size": [
+        0.16,
+        4,
+        10
+      ]
+    },
+    {
+      "name": "Dispatch_East",
+      "group": "FireStation_Upper",
+      "center": [
+        19,
+        8,
+        12
+      ],
+      "size": [
+        0.16,
+        4,
+        10
+      ]
+    },
+    {
+      "name": "Dispatch_North",
+      "group": "FireStation_Upper",
+      "center": [
+        14,
+        8,
+        7
+      ],
+      "size": [
+        10,
+        4,
+        0.16
+      ]
+    },
+    {
+      "name": "Dispatch_South",
+      "group": "FireStation_Upper",
+      "center": [
+        11.075,
+        8,
+        17
+      ],
+      "size": [
+        4.15,
+        4,
+        0.16
+      ]
+    },
+    {
+      "name": "Dispatch_South",
+      "group": "FireStation_Upper",
+      "center": [
+        16.925,
+        8,
+        17
+      ],
+      "size": [
+        4.15,
+        4,
+        0.16
+      ]
+    },
+    {
+      "name": "Dispatch desk",
+      "group": "FireStation_Upper",
+      "center": [
+        14,
+        6.76,
+        10
+      ],
+      "size": [
+        4,
+        0.15,
+        1.1
+      ]
+    },
+    {
+      "name": "Gear locker",
+      "group": "FireStation_Upper",
+      "center": [
+        -4,
+        7.2,
+        -18.1
+      ],
+      "size": [
+        1.6,
+        2.4,
+        0.65
+      ]
+    },
+    {
+      "name": "Gear locker",
+      "group": "FireStation_Upper",
+      "center": [
+        -2,
+        7.2,
+        -18.1
+      ],
+      "size": [
+        1.6,
+        2.4,
+        0.65
+      ]
+    },
+    {
+      "name": "Gear locker",
+      "group": "FireStation_Upper",
+      "center": [
+        0,
+        7.2,
+        -18.1
+      ],
+      "size": [
+        1.6,
+        2.4,
+        0.65
+      ]
+    },
+    {
+      "name": "Gear locker",
+      "group": "FireStation_Upper",
+      "center": [
+        2,
+        7.2,
+        -18.1
+      ],
+      "size": [
+        1.6,
+        2.4,
+        0.65
+      ]
+    },
+    {
+      "name": "Gear locker",
+      "group": "FireStation_Upper",
+      "center": [
+        4,
+        7.2,
+        -18.1
+      ],
+      "size": [
+        1.6,
+        2.4,
+        0.65
+      ]
+    },
+    {
+      "name": "Hose shelf",
+      "group": "FireStation_Upper",
+      "center": [
+        3,
+        6.1,
+        -15
+      ],
+      "size": [
+        1.7,
+        0.17,
+        1.7
+      ]
+    },
+    {
+      "name": "Crew wash",
+      "group": "FireStation_Upper",
+      "center": [
+        -16,
+        6.45,
+        -17.7
+      ],
+      "size": [
+        1.6,
+        0.9,
+        0.6
+      ]
+    },
+    {
+      "name": "Crew storage",
+      "group": "FireStation_Upper",
+      "center": [
+        -17,
+        7.15,
+        -12
+      ],
+      "size": [
+        1.7,
+        2.3,
+        0.65
+      ]
+    },
+    {
+      "name": "Crew storage",
+      "group": "FireStation_Upper",
+      "center": [
+        -14,
+        7.15,
+        -12
+      ],
+      "size": [
+        1.7,
+        2.3,
+        0.65
+      ]
+    }
+  ],
+  "notes": [
+    "Furniture and partitions only: retain existing exterior shell and external doors.",
+    "GLB is visual geometry; implement collision, stair walking, pole sliding and door interactions later.",
+    "Door clips open in 1 second; reverse the clip for closing.",
+    "Upper floor has physical stairwell and pole holes.",
+    "Root nodes allow floor-by-floor culling. No door signs."
+  ]
+}
