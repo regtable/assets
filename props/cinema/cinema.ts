@@ -4,7 +4,7 @@ import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 // Standalone, removable cinema. The rooftop planetarium is part of the GLB.
 // The marquee is deliberately blank until a name is chosen.
 export const CINEMA_ORIGIN = new THREE.Vector3(12,0,-56.5);
-const MODEL='https://raw.githubusercontent.com/regtable/assets/main/props/cinema/cinema-planetarium.glb';
+const MODEL='https://raw.githubusercontent.com/regtable/assets/main/props/cinema/cinema-planetarium-v2.glb';
 const PROGRAMMES='https://raw.githubusercontent.com/regtable/assets/main/props/cinema/programmes.json';
 type ScreenConfig={cycleSeconds:number;links:string[];fallbackText:string};
 type Programmes={epochUTC:string;screens:[ScreenConfig,ScreenConfig]};
@@ -87,11 +87,12 @@ export function createCinema(scene:THREE.Scene,camera:THREE.Camera,container:HTM
       if(inX&&near(q.z,16.5,r+.16)&&Math.abs(q.x)>2.1-r)return true;
       if(q.z<8.5+r&&q.z>-16.5&&near(q.x,-.5,r+.14))return true;
       if(inX&&near(q.z,8.5,r+.14)){
-        const opening=(q.x>-7.15+r&&q.x<-4.85-r)||(q.x>3.85+r&&q.x<6.15-r)||(q.x>9.55+r&&q.x<11.7-r);
+        const opening=(q.x>-7.15+r&&q.x<-4.85-r)||(q.x>3.85+r&&q.x<6.15-r)||(q.x>9.55+r&&q.x<11.8-r);
         if(!opening)return true;
       }
     }else if(foot>=5.7&&foot<11){
-      if(q.x<-11.65+r||q.x>11.65-r||q.z<-16.15+r||q.z>16.15-r){if(Math.abs(prev.x)<12&&Math.abs(prev.z)<16.5)return true;}
+      const onStairLanding=q.x>=9.1&&q.x<=11.75&&q.z>=.5&&q.z<=15.35;
+      if(q.x<-11.65+r||(q.x>11.65-r&&!onStairLanding)||q.x>11.78||q.z<-16.15+r||q.z>16.15-r){if(Math.abs(prev.x)<12&&Math.abs(prev.z)<16.5)return true;}
       const radius=Math.hypot(q.x,q.z+3),was=Math.hypot(prev.x,prev.z+3);
       if(Math.abs(radius-6.6)<r+.12&&!(q.z>2.5&&Math.abs(q.x)<1.3-r)&&Math.abs(radius-6.6)<=Math.abs(was-6.6))return true;
     }
@@ -99,7 +100,7 @@ export function createCinema(scene:THREE.Scene,camera:THREE.Camera,container:HTM
   }
   function surface(p:THREE.Vector3,foot:number):number|null{
     if(!loaded)return null;const q=local(p);
-    if(q.x>9.48&&q.x<11.67&&q.z>=2.6&&q.z<=15.25){const y=THREE.MathUtils.clamp((15.25-q.z)/12.2*6,0,6);if(Math.abs(foot-y)<1.2||foot>4.8)return y;}
+    if(q.x>=9.1&&q.x<=11.75&&q.z>=.5&&q.z<=15.35){const y=THREE.MathUtils.clamp((15.25-q.z)/12.2*6,0,6);if(Math.abs(foot-y)<1.2||foot>4.8)return y;}
     if(Math.abs(q.x)<11.65&&Math.abs(q.z)<16.1&&foot>4.8&&foot<8.5)return 6;
     return null;
   }

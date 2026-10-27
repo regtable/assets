@@ -46,9 +46,9 @@ for y in [.34,3.95,5.95,6.15]:
  box('Facade horizontal gold trim',0,y,16.57,24,.09,.08,gold)
  box('West horizontal trim',-11.99,y,0,.08,.09,33,gold);box('East horizontal trim',11.99,y,0,.08,.09,33,gold)
 # Roof remains a single visible exterior roof. Planetarium dome has a partial sphere.
-box('Roof terrace',-1.35,6.02,0,21.3,.24,33,cream)
-box('Roof terrace rear',10.65,6.02,-7,2.7,.24,19,cream)
-box('Roof terrace front',10.65,6.02,15.9,2.7,.24,1.2,cream)
+box('Roof terrace',-1.75,6.02,0,20.5,.24,33,cream)
+box('Roof terrace rear',10.25,6.02,-8,3.5,.24,17,cream)
+box('Roof terrace front',10.25,6.02,15.9,3.5,.24,1.2,cream)
 for x in [-11.6,11.6]:
  for z in range(-16,17,2):cylinder('Terrace post',x,6.65,z,.045,1.1,gold)
  beam('Terrace rail',(x,7.15,-16),(x,7.15,16),.045,gold)
