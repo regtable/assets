@@ -77,7 +77,7 @@ for x,z in [(-10,14),(10,14),(-10,-14),(10,-14)]:cylinder('Rooftop lamp post',x,
 current='CinemaInterior'
 box('Lobby floor',0,.025,12,23.3,.05,8.4,cream);box('Auditorium carpet',-1,.03,-4.4,21.2,.06,24,carpet)
 # Separating wall has two open doorways, x=-6 and +5.
-for x,w in [(-10,4),(-.5,7),(8.2,2.4)]:box('Lobby partition',x,2.8,8.5,w,5.6,.22,brick)
+for x,w in [(-10,4),(-.5,7),(7.875,1.75)]:box('Lobby partition',x,2.8,8.5,w,5.6,.22,brick)
 for x in [-6,5]:
  for dx in [-1.15,1.15]:box('Auditorium door frame',x+dx,1.45,8.5,.1,2.9,.28,gold)
  box('Auditorium lintel',x,3,8.5,2.4,.14,.28,gold)

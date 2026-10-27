@@ -4,7 +4,7 @@ import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 // Standalone, removable cinema. The rooftop planetarium is part of the GLB.
 // The marquee is deliberately blank until a name is chosen.
 export const CINEMA_ORIGIN = new THREE.Vector3(12,0,-56.5);
-const MODEL='https://raw.githubusercontent.com/regtable/assets/main/props/cinema/cinema-planetarium-v2.glb';
+const MODEL='https://raw.githubusercontent.com/regtable/assets/main/props/cinema/cinema-planetarium-v3.glb';
 const PROGRAMMES='https://raw.githubusercontent.com/regtable/assets/main/props/cinema/programmes.json';
 type ScreenConfig={cycleSeconds:number;links:string[];fallbackText:string};
 type Programmes={epochUTC:string;screens:[ScreenConfig,ScreenConfig]};
@@ -82,12 +82,13 @@ export function createCinema(scene:THREE.Scene,camera:THREE.Camera,container:HTM
     if(!loaded)return false;const q=local(p),prev=local(c),foot=p.y-2;
     const inZ=q.z>-16.5-r&&q.z<16.5+r,inX=q.x>-12-r&&q.x<12+r;
     if(foot<5.7){
-      if(inZ&&(near(q.x,-12,r+.16)||near(q.x,12,r+.16)))return true;
+      const inStairPassage=q.x>=9.1&&q.x<=11.75&&q.z>=.5&&q.z<=15.35;
+      if(inZ&&(near(q.x,-12,r+.16)||(near(q.x,12,r+.16)&&!inStairPassage)))return true;
       if(inX&&near(q.z,-16.5,r+.16))return true;
       if(inX&&near(q.z,16.5,r+.16)&&Math.abs(q.x)>2.1-r)return true;
       if(q.z<8.5+r&&q.z>-16.5&&near(q.x,-.5,r+.14))return true;
       if(inX&&near(q.z,8.5,r+.14)){
-        const opening=(q.x>-7.15+r&&q.x<-4.85-r)||(q.x>3.85+r&&q.x<6.15-r)||(q.x>9.55+r&&q.x<11.8-r);
+        const opening=(q.x>-7.15+r&&q.x<-4.85-r)||(q.x>3.85+r&&q.x<6.15-r)||(q.x>=9.1&&q.x<=11.75);
         if(!opening)return true;
       }
     }else if(foot>=5.7&&foot<11){

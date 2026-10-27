@@ -7,3 +7,5 @@ programmes.json holds two independent lists of direct HTTPS MP4/WebM video URLs.
 Cinema sound starts muted so it layers with existing music only when deliberately enabled. Use the on-screen Sound button for one screen at a time; volume defaults to 30%. Exiting the cinema or entering the rooftop resets it to muted. Browser autoplay and codecs may still require user interaction.
 
 Stair update: cinema-planetarium-v2.glb widens the stairwell opening and upper landing. Its corresponding editable Blender source is cinema-planetarium-v2.blend. The original GLB and Blender files remain available for rollback.
+
+Stair update v3: widen the partition opening halfway up to match the visible treads and ensure the collision rules cover the full width. Previous v1 and v2 models remain available.
