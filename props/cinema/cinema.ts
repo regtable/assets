@@ -38,7 +38,7 @@ export function createCinema(scene:THREE.Scene,camera:THREE.Camera,container:HTM
   let exterior:THREE.Object3D|undefined,interior:THREE.Object3D|undefined,planetarium:THREE.Object3D|undefined;
   const geometries=new Set<THREE.BufferGeometry>(),materials=new Set<THREE.Material>(),textures=new Set<THREE.Texture>();
   const doors=new THREE.Group();group.add(doors);
-  const doorMat=new THREE.MeshStandardMaterial({color:0x29404c,metalness:.45,roughness:.28});materials.add(doorMat);
+  const doorMat=new THREE.MeshStandardMaterial({color:0x66808c,metalness:.25,roughness:.18,transparent:true,opacity:.32,depthWrite:false});materials.add(doorMat);
   const doorGeo=new THREE.BoxGeometry(2.1,3.6,.12);geometries.add(doorGeo);
   const doorLeaves=[-1,1].map(sign=>{const m=new THREE.Mesh(doorGeo,doorMat);m.position.set(sign*1.05,1.8,16.4);doors.add(m);return m;});
   let audioScreen=-1;
