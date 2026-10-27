@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_techno",
+  "name": "Techno Warehouse",
+  "type": "genre",
+  "color": "#364E4D",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/33.jpg",
+  "description": "Rumble kick, hypnotic modular sequences, dark industrial warehouse atmosphere.",
+  "tags": [
+    "industrial",
+    "modular",
+    "rumble-kick",
+    "hypnotic"
+  ],
+  "crateIndex": 33,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/e7f57528-2762-44e0-8fe6-edd9f3be3a2b.jpg",
+  "sourceGenres": [
+    {
+      "id": "f0e7a595-f3fe-4bed-a81c-22970a6752d5",
+      "name": "industrial",
+      "slug": "industrial"
+    }
+  ]
+}

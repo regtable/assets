@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_postrock",
+  "name": "Post-Rock",
+  "type": "genre",
+  "color": "#6C8A8F",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/42.jpg",
+  "description": "Crescendo guitar swells, cinematic arrangements, emotional climaxes.",
+  "tags": [
+    "cinematic",
+    "crescendo",
+    "instrumental",
+    "tremolo"
+  ],
+  "crateIndex": 42,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/89142dd1-7396-45e6-9bb0-8d1e5ed5c500.jpg",
+  "sourceGenres": [
+    {
+      "id": "59dc291a-dfa6-4e5a-be26-36442cfc2678",
+      "name": "instrumental",
+      "slug": "instrumental"
+    }
+  ]
+}

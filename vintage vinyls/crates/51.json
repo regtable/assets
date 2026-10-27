@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_electric_guitar",
+  "name": "Electric Guitar Stems",
+  "type": "genre",
+  "color": "#8f729e",
+  "description": "Isolated electric guitar performances; no accompaniment.",
+  "tags": [
+    "electric guitar",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "electric guitar",
+  "stemVariants": [
+    "clean arpeggios",
+    "crunchy rhythm chords",
+    "expressive lead phrase"
+  ],
+  "crateIndex": 51,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/51.jpg"
+}

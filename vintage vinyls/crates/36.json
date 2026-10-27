@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_dnb",
+  "name": "Drum & Bass",
+  "type": "genre",
+  "color": "#F15458",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/36.jpg",
+  "description": "174 BPM breakbeats, reese basslines, energetic amen chops.",
+  "tags": [
+    "174bpm",
+    "amen-break",
+    "reese-bass",
+    "liquid-dnb"
+  ],
+  "crateIndex": 36,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/9174fb3e-d90f-46cc-b09e-b0d8ed1acaf7.jpg",
+  "sourceGenres": []
+}

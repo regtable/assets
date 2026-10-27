@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_hihat",
+  "name": "Hi-Hats Stems",
+  "type": "genre",
+  "color": "#8f729e",
+  "description": "Isolated hi-hat cymbals performances; no accompaniment.",
+  "tags": [
+    "hi-hat cymbals",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "hi-hat cymbals",
+  "stemVariants": [
+    "closed eighth notes",
+    "open offbeat accents",
+    "sixteenth-note shuffle"
+  ],
+  "crateIndex": 47,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/47.jpg"
+}

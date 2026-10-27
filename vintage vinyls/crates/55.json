@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_organ",
+  "name": "Tonewheel Organ Stems",
+  "type": "genre",
+  "color": "#8f729e",
+  "description": "Isolated tonewheel organ performances; no accompaniment.",
+  "tags": [
+    "tonewheel organ",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "tonewheel organ",
+  "stemVariants": [
+    "gospel chord movement",
+    "blues drawbar riff",
+    "sustained rotary chords"
+  ],
+  "crateIndex": 55,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/55.jpg"
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_country",
+  "name": "Outlaw Country",
+  "type": "genre",
+  "color": "#b45309",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/43.jpg",
+  "description": "Pedal steel guitar, acoustic strumming, twangy storytelling vocals.",
+  "tags": [
+    "pedal-steel",
+    "twang",
+    "acoustic",
+    "storytelling"
+  ],
+  "crateIndex": 43,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/a59729f0-8793-4959-9161-11bdc25b0be6.jpg",
+  "sourceGenres": [
+    {
+      "id": "28c63f98-87cc-450b-b0cf-769af6882fff",
+      "name": "Acoustic",
+      "slug": "Acoustic"
+    }
+  ]
+}

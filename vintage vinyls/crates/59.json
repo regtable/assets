@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_strings",
+  "name": "Strings Stems",
+  "type": "genre",
+  "color": "#8f729e",
+  "description": "Isolated string ensemble performances; no accompaniment.",
+  "tags": [
+    "string ensemble",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "string ensemble",
+  "stemVariants": [
+    "legato phrase",
+    "staccato ostinato",
+    "pizzicato pattern"
+  ],
+  "crateIndex": 59,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/59.jpg"
+}

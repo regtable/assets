@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_brass",
+  "name": "Brass Stems",
+  "type": "genre",
+  "color": "#c49b45",
+  "description": "Isolated brass section performances; no accompaniment.",
+  "tags": [
+    "brass section",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "brass section",
+  "stemVariants": [
+    "tight stabs",
+    "warm sustained voicings",
+    "fanfare phrases"
+  ],
+  "crateIndex": 60,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/60.jpg"
+}

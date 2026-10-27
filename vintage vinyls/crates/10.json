@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_grunge",
+  "name": "90s Grunge",
+  "type": "genre",
+  "color": "#A21D20",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/10.jpg",
+  "description": "Fuzz guitar pedals, melancholic verses, explosive choruses, raw vocals.",
+  "tags": [
+    "seattle-sound",
+    "fuzz",
+    "alt-rock",
+    "gritty"
+  ],
+  "crateIndex": 10,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/8cb7b26a-63c7-4a62-9af1-f3f7f3e74522.jpg",
+  "sourceGenres": []
+}

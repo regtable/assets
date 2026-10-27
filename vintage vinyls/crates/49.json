@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_electric_bass",
+  "name": "Electric Bass Stems",
+  "type": "genre",
+  "color": "#b97654",
+  "description": "Isolated electric bass guitar performances; no accompaniment.",
+  "tags": [
+    "electric bass guitar",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "electric bass guitar",
+  "stemVariants": [
+    "fingerstyle pocket",
+    "muted pick groove",
+    "slap-and-pop riff"
+  ],
+  "crateIndex": 49,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/49.jpg"
+}

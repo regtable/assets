@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_funk",
+  "name": "Funk & Soul",
+  "type": "genre",
+  "color": "#d97706",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/26.jpg",
+  "description": "Slap bass, tight horn section, wah-wah guitar, infectious groove.",
+  "tags": [
+    "slap-bass",
+    "horns",
+    "wah-guitar",
+    "soulful"
+  ],
+  "crateIndex": 26,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/00a263b3-4508-4984-b693-c6d6dc1bbae0.jpg",
+  "sourceGenres": []
+}

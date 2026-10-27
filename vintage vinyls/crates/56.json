@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_synth_bass",
+  "name": "Synth Bass Stems",
+  "type": "genre",
+  "color": "#c49b45",
+  "description": "Isolated monophonic synthesizer bass performances; no accompaniment.",
+  "tags": [
+    "monophonic synthesizer bass",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "monophonic synthesizer bass",
+  "stemVariants": [
+    "rounded analog pulse",
+    "resonant acid sequence",
+    "deep sustained sub bass"
+  ],
+  "crateIndex": 56,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/56.jpg"
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_lofi",
+  "name": "Lo-Fi Beats",
+  "type": "genre",
+  "color": "#f97316",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/16.jpg",
+  "description": "Dusty vinyl crackle, warm rhodes chords, slow boom-bap rhythm.",
+  "tags": [
+    "chillhop",
+    "jazzy-rhodes",
+    "tape-saturation",
+    "relaxed"
+  ],
+  "crateIndex": 16,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/cdc53977-682a-4e42-a07e-ba37906800cb.jpg",
+  "sourceGenres": []
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_snare",
+  "name": "Snare Drum Stems",
+  "type": "genre",
+  "color": "#688c99",
+  "description": "Isolated snare drum performances; no accompaniment.",
+  "tags": [
+    "snare drum",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "snare drum",
+  "stemVariants": [
+    "backbeat hits",
+    "ghost-note groove",
+    "marching rudiments"
+  ],
+  "crateIndex": 46,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/46.jpg"
+}

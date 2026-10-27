@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "era_90s",
+  "name": "1990s Underground",
+  "type": "era",
+  "color": "#C2A42C",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/11.jpg",
+  "description": "Raw grunge, boom-bap hip-hop, golden-era rave, and alt-rock anthems.",
+  "yearRange": [
+    1990,
+    1999
+  ],
+  "tags": [
+    "grunge",
+    "boom-bap",
+    "trip-hop",
+    "shoegaze",
+    "jungle"
+  ],
+  "crateIndex": 11,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/d0fa1f90-6189-470f-9d90-4e77421eaa36.jpg",
+  "sourceGenres": [
+    {
+      "id": "6c65d003-6cad-4042-acae-bacb3f6c83b9",
+      "name": "grunge",
+      "slug": "grunge"
+    },
+    {
+      "id": "1e7dae89-2606-4572-9108-91967ee7baa5",
+      "name": "boom bap",
+      "slug": "boom bap"
+    },
+    {
+      "id": "c6443ed9-1a0e-435d-9832-e1c68ae12f53",
+      "name": "trip hop",
+      "slug": "trip hop"
+    },
+    {
+      "id": "80d3d319-7f37-4c08-a7a5-0b6e65b86ba1",
+      "name": "shoegaze",
+      "slug": "shoegaze"
+    },
+    {
+      "id": "088afa15-a8ad-4407-9862-d1551e4fa401",
+      "name": "jungle",
+      "slug": "jungle"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "era_2000s",
+  "name": "2000s Naughties",
+  "type": "era",
+  "color": "#DDDFEB",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/12.jpg",
+  "description": "Y2K pop-punk, polished R&B, garage rock revival, and early electroclash.",
+  "yearRange": [
+    2000,
+    2009
+  ],
+  "tags": [
+    "pop-punk",
+    "indie-sleaze",
+    "nu-metal",
+    "electro-house",
+    "dirty-south"
+  ],
+  "crateIndex": 12,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/a35de64d-e4e6-4196-8b0f-bb69713b9589.jpg",
+  "sourceGenres": [
+    {
+      "id": "9d0239f7-594d-4834-8978-e623a52f695f",
+      "name": "pop punk",
+      "slug": "pop punk"
+    },
+    {
+      "id": "2340516c-1b4b-4ab1-aaa7-6ce2bf2447e6",
+      "name": "nu metal",
+      "slug": "nu metal"
+    },
+    {
+      "id": "47378e57-73e8-45a7-9ba7-165fa48f057c",
+      "name": "electro house",
+      "slug": "electro-house"
+    },
+    {
+      "id": "c78a762a-18c6-4a6f-81e4-a0b82acfd86b",
+      "name": "dirty south",
+      "slug": "dirty-south"
+    }
+  ]
+}

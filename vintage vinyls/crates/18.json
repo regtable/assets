@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_industrial",
+  "name": "Industrial Rock",
+  "type": "genre",
+  "color": "#726C66",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/18.jpg",
+  "description": "Clanging metallic percussion, distorted synth bass, aggressive vocal delivery.",
+  "tags": [
+    "metallic-percussion",
+    "harsh-synths",
+    "dark",
+    "aggressive"
+  ],
+  "crateIndex": 18,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/45f9801a-434d-4422-84d0-2a6692130527.jpg",
+  "sourceGenres": []
+}

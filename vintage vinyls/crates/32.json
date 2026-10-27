@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_ambient",
+  "name": "Ambient & Drift",
+  "type": "genre",
+  "color": "#6D4051",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/32.jpg",
+  "description": "Lush evolving pads, generative soundscapes, ethereal tape loops.",
+  "tags": [
+    "drone",
+    "meditation",
+    "tape-loops",
+    "warm-reverb"
+  ],
+  "crateIndex": 32,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/747edacc-b2c5-48b4-99ae-ff6e679c86dd.jpg",
+  "sourceGenres": [
+    {
+      "id": "1b19ea7d-6f1e-4409-b482-1117670ac730",
+      "name": "drone",
+      "slug": "drone"
+    }
+  ]
+}

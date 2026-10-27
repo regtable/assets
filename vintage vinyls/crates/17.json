@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_hyperpop",
+  "name": "Hyperpop Glitch",
+  "type": "genre",
+  "color": "#FF29CE",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/17.jpg",
+  "description": "Pitch-shifted autotune vocals, metallic synth plucks, chaotic energy.",
+  "tags": [
+    "autotune",
+    "glitch",
+    "pitched-vocals",
+    "max-energy"
+  ],
+  "crateIndex": 17,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/7fd80740-ddd8-4380-8bb7-8e05f6eea382.jpg",
+  "sourceGenres": [
+    {
+      "id": "455d7b27-0842-4d11-8b03-f163ca25ae04",
+      "name": "glitch",
+      "slug": "glitch"
+    }
+  ]
+}

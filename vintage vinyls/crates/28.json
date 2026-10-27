@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_reggaeton",
+  "name": "Reggaeton / Latin",
+  "type": "genre",
+  "color": "#2AB762",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/28.jpg",
+  "description": "Dembow riddim beat, booming sub bass, catchy vocal hooks.",
+  "tags": [
+    "dembow",
+    "urban-latin",
+    "dancehall",
+    "reggaeton-beat"
+  ],
+  "crateIndex": 28,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/1207b2dc-a196-4fa5-adbc-c4beebcfde10.jpg",
+  "sourceGenres": [
+    {
+      "id": "342d1964-c629-41bd-987f-731c8985b50e",
+      "name": "dembow",
+      "slug": "dembow"
+    },
+    {
+      "id": "11cfa6d5-bc25-420c-90ef-51bf0ff7a4a9",
+      "name": "dancehall",
+      "slug": "dancehall"
+    }
+  ]
+}

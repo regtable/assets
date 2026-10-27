@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_dubstep",
+  "name": "Dubstep / Bass",
+  "type": "genre",
+  "color": "#00C584",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/23.jpg",
+  "description": "Heavy 140 BPM wobble bass, half-time snare, sub-bass pressure.",
+  "tags": [
+    "wobble",
+    "sub-bass",
+    "140bpm",
+    "half-time"
+  ],
+  "crateIndex": 23,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/3cc6fd6b-c1c1-40bb-b10d-565fe2760797.jpg",
+  "sourceGenres": []
+}

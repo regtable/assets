@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "era_future",
+  "name": "Future Sounds",
+  "type": "era",
+  "color": "#009FD9",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/15.jpg",
+  "description": "Cybernetic soundscapes, glitch core, holographic bass, and quantum resonance.",
+  "yearRange": [
+    2080,
+    3020
+  ],
+  "tags": [
+    "cyberpunk",
+    "glitchcore",
+    "quantum-ambient",
+    "neo-grime",
+    "holographic"
+  ],
+  "crateIndex": 15,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/4ec02dbf-9d86-4140-a3a3-497565a09ce2.jpg",
+  "sourceGenres": [
+    {
+      "id": "87bae714-3aa4-40bd-96da-c14e129928b9",
+      "name": "cyberpunk",
+      "slug": "cyberpunk"
+    }
+  ]
+}

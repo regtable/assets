@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_acoustic_guitar",
+  "name": "Acoustic Guitar Stems",
+  "type": "genre",
+  "color": "#c49b45",
+  "description": "Isolated acoustic guitar performances; no accompaniment.",
+  "tags": [
+    "acoustic guitar",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "acoustic guitar",
+  "stemVariants": [
+    "fingerstyle pattern",
+    "flatpicked melody",
+    "gentle strummed chords"
+  ],
+  "crateIndex": 52,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/52.jpg"
+}

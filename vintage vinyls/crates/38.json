@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_emo",
+  "name": "Emo & Math Rock",
+  "type": "genre",
+  "color": "#C89A49",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/38.jpg",
+  "description": "Tapped guitar melodies, odd time signatures, passionate vocal crescendos.",
+  "tags": [
+    "twinkle-guitars",
+    "odd-time",
+    "heartfelt",
+    "midwest-emo"
+  ],
+  "crateIndex": 38,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/4c91afb3-28d5-4d96-b054-4f2c38ad0652.jpg",
+  "sourceGenres": [
+    {
+      "id": "a5886032-5e54-437b-82a2-6ec70ff62000",
+      "name": "midwest emo",
+      "slug": "midwest-emo"
+    }
+  ]
+}

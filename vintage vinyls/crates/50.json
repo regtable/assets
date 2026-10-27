@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_upright_bass",
+  "name": "Upright Bass Stems",
+  "type": "genre",
+  "color": "#688c99",
+  "description": "Isolated upright double bass performances; no accompaniment.",
+  "tags": [
+    "upright double bass",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "upright double bass",
+  "stemVariants": [
+    "pizzicato walking line",
+    "two-feel pulse",
+    "bowed sustained phrase"
+  ],
+  "crateIndex": 50,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/50.jpg"
+}

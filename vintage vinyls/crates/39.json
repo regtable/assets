@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_folk_bluegrass",
+  "name": "Folk & Bluegrass",
+  "type": "genre",
+  "color": "#15803d",
+  "description": "Acoustic fingerpicking, nimble banjo, fiddle phrases, mandolin and close-harmony storytelling.",
+  "tags": [
+    "folk",
+    "bluegrass"
+  ],
+  "crateIndex": 39,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/39.jpg",
+  "sourceGenres": [
+    {
+      "id": "66c7ebb3-1609-4461-a55f-58cf4a81c510",
+      "name": "folk",
+      "slug": "folk"
+    },
+    {
+      "id": "c05e4340-625d-416e-ac72-bdb7cb4c1c0b",
+      "name": "bluegrass",
+      "slug": "bluegrass"
+    }
+  ]
+}

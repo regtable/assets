@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_kick",
+  "name": "Kick Drum Stems",
+  "type": "genre",
+  "color": "#b97654",
+  "description": "Isolated kick drum performances; no accompaniment.",
+  "tags": [
+    "kick drum",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "kick drum",
+  "stemVariants": [
+    "four-on-the-floor pulse",
+    "syncopated kicks",
+    "sparse half-time kicks"
+  ],
+  "crateIndex": 45,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/45.jpg"
+}

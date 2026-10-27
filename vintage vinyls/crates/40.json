@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_classical_fantasy",
+  "name": "Classical Fantasy",
+  "type": "genre",
+  "color": "#be185d",
+  "description": "Sweeping orchestral fantasy, lyrical strings, harp arpeggios, brass fanfares and cinematic symphonic development.",
+  "tags": [
+    "orchestral",
+    "classical"
+  ],
+  "crateIndex": 40,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/40.jpg",
+  "sourceGenres": [
+    {
+      "id": "15af7aa8-03a4-44b9-b5ac-ae3a20a67649",
+      "name": "orchestral",
+      "slug": "orchestral"
+    },
+    {
+      "id": "66b024fb-493d-4fea-b6a6-ffb50e7de380",
+      "name": "classical",
+      "slug": "classical"
+    }
+  ]
+}

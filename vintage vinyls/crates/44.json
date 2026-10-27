@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_drum_kit",
+  "name": "Drum Kit Stems",
+  "type": "genre",
+  "color": "#c49b45",
+  "description": "Isolated acoustic drum kit performances; no accompaniment.",
+  "tags": [
+    "acoustic drum kit",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "acoustic drum kit",
+  "stemVariants": [
+    "tight funk groove",
+    "straight rock groove",
+    "brush swing"
+  ],
+  "crateIndex": 44,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/44.jpg"
+}

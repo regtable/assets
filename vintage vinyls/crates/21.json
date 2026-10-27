@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_ska",
+  "name": "Ska & Reggae",
+  "type": "genre",
+  "color": "#FAB800",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/21.jpg",
+  "description": "Upbeat guitar skank, walking bassline, punchy horn section.",
+  "tags": [
+    "upbeat-skank",
+    "reggae-dub",
+    "horns",
+    "ska-punk"
+  ],
+  "crateIndex": 21,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/5e66c471-bf18-4867-a5bf-7a3e249df728.jpg",
+  "sourceGenres": [
+    {
+      "id": "f45c9960-7add-4930-a6c5-3969b5cfbe31",
+      "name": "ska punk",
+      "slug": "ska punk"
+    }
+  ]
+}

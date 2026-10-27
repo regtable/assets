@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_vibraphone",
+  "name": "Vibraphone Stems",
+  "type": "genre",
+  "color": "#8f729e",
+  "description": "Isolated vibraphone performances; no accompaniment.",
+  "tags": [
+    "vibraphone",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "vibraphone",
+  "stemVariants": [
+    "soft jazz chords",
+    "rolling arpeggios",
+    "single-note melody"
+  ],
+  "crateIndex": 63,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/63.jpg"
+}

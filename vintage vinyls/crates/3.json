@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "era_1920s",
+  "name": "1920s Roaring Jazz",
+  "type": "era",
+  "color": "#059669",
+  "description": "Roaring dance bands, stride piano, jaunty brass and lively acoustic swing.",
+  "tags": [
+    "dixieland",
+    "jazz"
+  ],
+  "yearRange": [
+    1920,
+    1929
+  ],
+  "crateIndex": 3,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/3.jpg",
+  "sourceGenres": [
+    {
+      "id": "4163a9af-3dfb-4c67-9824-2d4eca78b030",
+      "name": "dixieland",
+      "slug": "dixieland"
+    },
+    {
+      "id": "82936f0d-abe2-4c2f-9f3e-da1e2fb5b362",
+      "name": "jazz",
+      "slug": "jazz"
+    }
+  ]
+}

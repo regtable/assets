@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_chiptune",
+  "name": "Chiptune / 8-Bit",
+  "type": "genre",
+  "color": "#252173",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/19.jpg",
+  "description": "Square wave leads, noise channel percussion, retro arcade melody.",
+  "tags": [
+    "8-bit",
+    "arcade",
+    "gameboy",
+    "square-waves"
+  ],
+  "crateIndex": 19,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/d7d60ca7-cb80-4d33-a6d6-bf430b31463d.jpg",
+  "sourceGenres": []
+}

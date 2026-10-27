@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_percussion",
+  "name": "Hand Percussion Stems",
+  "type": "genre",
+  "color": "#c49b45",
+  "description": "Isolated hand percussion performances; no accompaniment.",
+  "tags": [
+    "hand percussion",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "hand percussion",
+  "stemVariants": [
+    "conga tumbao",
+    "bongo martillo",
+    "shaker ostinato"
+  ],
+  "crateIndex": 48,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/48.jpg"
+}

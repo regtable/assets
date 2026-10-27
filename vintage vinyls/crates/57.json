@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_synth_lead",
+  "name": "Synth Lead Stems",
+  "type": "genre",
+  "color": "#b97654",
+  "description": "Isolated lead synthesizer performances; no accompaniment.",
+  "tags": [
+    "lead synthesizer",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "lead synthesizer",
+  "stemVariants": [
+    "expressive mono lead",
+    "bright arpeggio",
+    "portamento melody"
+  ],
+  "crateIndex": 57,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/57.jpg"
+}

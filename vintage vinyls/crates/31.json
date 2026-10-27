@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_dark_kpop",
+  "name": "Dark K-Pop",
+  "type": "genre",
+  "color": "#881337",
+  "description": "Dramatic Korean pop arrangement, minor-key synths, precise choreography-ready rhythm and cinematic vocal hooks.",
+  "tags": [
+    "k-pop",
+    "dance-pop"
+  ],
+  "crateIndex": 31,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/31.jpg",
+  "sourceGenres": [
+    {
+      "id": "cf779406-4771-4891-a965-262eb4566122",
+      "name": "k-pop",
+      "slug": "k-pop"
+    },
+    {
+      "id": "96816219-a4e2-4bf3-ab03-b0d078663b20",
+      "name": "dance-pop",
+      "slug": "dance-pop"
+    }
+  ]
+}

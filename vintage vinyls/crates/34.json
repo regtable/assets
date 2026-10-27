@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_hiphop",
+  "name": "Hip-Hop Classics",
+  "type": "genre",
+  "color": "#E1972B",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/34.jpg",
+  "description": "Sampling art, heavy basslines, rhythmic rhyming, head-nodding bounce.",
+  "tags": [
+    "east-coast",
+    "golden-era",
+    "sampled-groove",
+    "heavy-80s"
+  ],
+  "crateIndex": 34,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/09377e3f-b4b3-4ce3-860b-5ebdbd9cf984.jpg",
+  "sourceGenres": []
+}

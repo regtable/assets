@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_afrobeat",
+  "name": "Afrobeats",
+  "type": "genre",
+  "color": "#f59e0b",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/29.jpg",
+  "description": "Polyrhythmic percussive grooves, smooth saxophone, sunny guitar lines.",
+  "tags": [
+    "polyrhythms",
+    "percussion",
+    "warm-groove",
+    "modern-afro"
+  ],
+  "crateIndex": 29,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/3a52ea3b-deca-473e-81f1-51dc9cac788e.jpg",
+  "sourceGenres": []
+}

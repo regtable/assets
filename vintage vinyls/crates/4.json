@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "era_1930s",
+  "name": "1930s Swing Ballroom",
+  "type": "era",
+  "color": "#334155",
+  "description": "Swinging big-band arrangements, walking bass, call-and-response brass and warm ballroom acoustics.",
+  "tags": [
+    "swing",
+    "big band"
+  ],
+  "yearRange": [
+    1930,
+    1939
+  ],
+  "crateIndex": 4,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/4.jpg",
+  "sourceGenres": [
+    {
+      "id": "cf2b52de-d655-4264-9d57-56419b5df582",
+      "name": "swing",
+      "slug": "swing"
+    },
+    {
+      "id": "d06775bd-0c8e-4946-88bf-448b83280bf9",
+      "name": "big band",
+      "slug": "big-band"
+    }
+  ]
+}

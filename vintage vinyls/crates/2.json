@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "era_1910s",
+  "name": "1910s Dixieland Parade",
+  "type": "era",
+  "color": "#991b1b",
+  "description": "Early ensemble jazz, bright cornet, clarinet counterpoint and buoyant ragtime rhythm.",
+  "tags": [
+    "dixieland",
+    "ragtime"
+  ],
+  "yearRange": [
+    1910,
+    1919
+  ],
+  "crateIndex": 2,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/2.jpg",
+  "sourceGenres": [
+    {
+      "id": "4163a9af-3dfb-4c67-9824-2d4eca78b030",
+      "name": "dixieland",
+      "slug": "dixieland"
+    },
+    {
+      "id": "c1c2ef2b-25bf-45aa-8e2e-17b980ffddc6",
+      "name": "ragtime",
+      "slug": "ragtime"
+    }
+  ]
+}

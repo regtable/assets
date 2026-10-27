@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "era_1900s",
+  "name": "1900s Ragtime Parlour",
+  "type": "era",
+  "color": "#c29b38",
+  "description": "Syncopated ragtime piano, parlour songs, early acoustic performance and gramophone warmth.",
+  "tags": [
+    "ragtime",
+    "traditional pop"
+  ],
+  "yearRange": [
+    1900,
+    1909
+  ],
+  "crateIndex": 1,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/1.jpg",
+  "sourceGenres": [
+    {
+      "id": "c1c2ef2b-25bf-45aa-8e2e-17b980ffddc6",
+      "name": "ragtime",
+      "slug": "ragtime"
+    },
+    {
+      "id": "8a984537-5d39-4771-8d25-2ec44be4714d",
+      "name": "traditional pop",
+      "slug": "traditional-pop"
+    }
+  ]
+}

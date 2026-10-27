@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_electric_piano",
+  "name": "Electric Piano Stems",
+  "type": "genre",
+  "color": "#688c99",
+  "description": "Isolated tine electric piano performances; no accompaniment.",
+  "tags": [
+    "tine electric piano",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "tine electric piano",
+  "stemVariants": [
+    "warm soul chords",
+    "syncopated comping",
+    "gentle melodic fills"
+  ],
+  "crateIndex": 54,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/54.jpg"
+}

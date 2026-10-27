@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "era_80s",
+  "name": "1980s Vault",
+  "type": "era",
+  "color": "#00A0E3",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/9.jpg",
+  "description": "Neon synths, gated reverb drums, new wave hooks, and lush glam rock.",
+  "yearRange": [
+    1980,
+    1989
+  ],
+  "tags": [
+    "synthpop",
+    "post-punk",
+    "hair-metal",
+    "new-wave",
+    "disco-funk"
+  ],
+  "crateIndex": 9,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/a61e2e3b-3952-427b-a249-bbb49270ebc7.jpg",
+  "sourceGenres": [
+    {
+      "id": "3e465956-b2ef-42f9-8503-af7299aa341a",
+      "name": "post-punk",
+      "slug": "post-punk"
+    },
+    {
+      "id": "32ff91e7-29e3-46f7-9734-9f514a3adbc1",
+      "name": "new wave",
+      "slug": "new wave"
+    }
+  ]
+}

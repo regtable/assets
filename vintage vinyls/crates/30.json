@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_jazz",
+  "name": "Jazz & Fusion",
+  "type": "genre",
+  "color": "#ECE1B8",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/30.jpg",
+  "description": "Complex modal harmony, saxophone solos, walking bass, brush snare.",
+  "tags": [
+    "modal-jazz",
+    "bebop",
+    "electric-fusion",
+    "smooth"
+  ],
+  "crateIndex": 30,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/e7783ed3-cd42-4bbe-aca5-14da99e7e5da.jpg",
+  "sourceGenres": [
+    {
+      "id": "0a5ca22e-a665-451a-8cb2-ea92adc85e19",
+      "name": "modal jazz",
+      "slug": "modal-jazz"
+    },
+    {
+      "id": "e36f018a-ba7a-447e-984f-179c65d76a81",
+      "name": "bebop",
+      "slug": "bebop"
+    }
+  ]
+}

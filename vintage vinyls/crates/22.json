@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_punk",
+  "name": "Punk & Hardcore",
+  "type": "genre",
+  "color": "#F83336",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/22.jpg",
+  "description": "Aggressive distorted guitars, fast 4/4 drums, raw vocal energy.",
+  "tags": [
+    "garage-punk",
+    "hardcore",
+    "distorted-bass",
+    "high-tempo"
+  ],
+  "crateIndex": 22,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/fea4402e-eb61-485b-bf19-3675194240bc.jpg",
+  "sourceGenres": [
+    {
+      "id": "7bde51e8-b536-4780-8f1d-0a7bd2361d4a",
+      "name": "garage punk",
+      "slug": "garage-punk"
+    }
+  ]
+}

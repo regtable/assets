@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_synth_pads",
+  "name": "Synth Pads Stems",
+  "type": "genre",
+  "color": "#688c99",
+  "description": "Isolated synthesizer pad performances; no accompaniment.",
+  "tags": [
+    "synthesizer pad",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "synthesizer pad",
+  "stemVariants": [
+    "slow evolving chords",
+    "airy sustained texture",
+    "warm analog swell"
+  ],
+  "crateIndex": 58,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/58.jpg"
+}

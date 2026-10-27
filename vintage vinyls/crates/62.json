@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_flute",
+  "name": "Flute Stems",
+  "type": "genre",
+  "color": "#688c99",
+  "description": "Isolated concert flute performances; no accompaniment.",
+  "tags": [
+    "concert flute",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "concert flute",
+  "stemVariants": [
+    "airy lyrical phrase",
+    "nimble runs",
+    "soft sustained melody"
+  ],
+  "crateIndex": 62,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/62.jpg"
+}

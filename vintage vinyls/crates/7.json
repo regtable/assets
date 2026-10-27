@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "era_1960s",
+  "name": "1960s Psychedelic Garden",
+  "type": "era",
+  "color": "#84cc16",
+  "description": "Fuzz guitar, swirling organ, tape experimentation and colourful psychedelic arrangements.",
+  "tags": [
+    "psychedelic rock",
+    "garage rock"
+  ],
+  "yearRange": [
+    1960,
+    1969
+  ],
+  "crateIndex": 7,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/7.jpg",
+  "sourceGenres": [
+    {
+      "id": "26e9ff19-6458-4ca5-8657-01779d4347e0",
+      "name": "psychedelic rock",
+      "slug": "psychedelic rock"
+    },
+    {
+      "id": "0a4e3712-b207-4f89-9acf-727b18b06c08",
+      "name": "garage rock",
+      "slug": "garage rock"
+    }
+  ]
+}

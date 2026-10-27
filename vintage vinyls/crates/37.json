@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_metal",
+  "name": "Heavy Metal & Thrash",
+  "type": "genre",
+  "color": "#908F8D",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/37.jpg",
+  "description": "Double kick pedal, chugging high-gain guitars, soaring guitar solos.",
+  "tags": [
+    "thrash",
+    "heavy-riff",
+    "double-bass",
+    "metalcore"
+  ],
+  "crateIndex": 37,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/b1c31b9f-cf44-4de6-905b-5837d2177c75.jpg",
+  "sourceGenres": [
+    {
+      "id": "e7c1a989-4d2b-4dd4-809e-dd5706ceb594",
+      "name": "Thrash",
+      "slug": "Thrash"
+    },
+    {
+      "id": "aefaa9f0-0593-4c41-bccb-48e01fcd1f57",
+      "name": "metalcore",
+      "slug": "metalcore"
+    }
+  ]
+}

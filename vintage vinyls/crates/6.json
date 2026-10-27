@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "era_1950s",
+  "name": "1950s Rockabilly Jukebox",
+  "type": "era",
+  "color": "#f43f5e",
+  "description": "Slapback guitar, upright bass, tight rockabilly drums and doo-wop harmonies.",
+  "tags": [
+    "rockabilly",
+    "doo-wop"
+  ],
+  "yearRange": [
+    1950,
+    1959
+  ],
+  "crateIndex": 6,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/6.jpg",
+  "sourceGenres": [
+    {
+      "id": "17500d07-1dab-4a9e-a462-f3ac0928e374",
+      "name": "rockabilly",
+      "slug": "rockabilly"
+    },
+    {
+      "id": "0cb6609d-826e-4d79-8c0a-4d6f01e3d970",
+      "name": "doo-wop",
+      "slug": "doo-wop"
+    }
+  ]
+}

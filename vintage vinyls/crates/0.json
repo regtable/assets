@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "era_1800s",
+  "name": "1800s Romantic & Operetta",
+  "type": "era",
+  "color": "#8A9BA8",
+  "description": "Romantic piano, expressive strings and operetta melodies; historical repertoire reimagined for a record collection.",
+  "tags": [
+    "classical",
+    "operetta"
+  ],
+  "yearRange": [
+    1800,
+    1899
+  ],
+  "crateIndex": 0,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/0.jpg",
+  "sourceGenres": [
+    {
+      "id": "66b024fb-493d-4fea-b6a6-ffb50e7de380",
+      "name": "classical",
+      "slug": "classical"
+    },
+    {
+      "id": "ac14d1d8-5fb0-4a47-ad09-d92474c3f7de",
+      "name": "operetta",
+      "slug": "operetta"
+    }
+  ]
+}

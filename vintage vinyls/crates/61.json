@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_saxophone",
+  "name": "Saxophone Stems",
+  "type": "genre",
+  "color": "#b97654",
+  "description": "Isolated saxophone performances; no accompaniment.",
+  "tags": [
+    "saxophone",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "saxophone",
+  "stemVariants": [
+    "breathy melodic line",
+    "bright jazz phrase",
+    "soulful sustained notes"
+  ],
+  "crateIndex": 61,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/61.jpg"
+}

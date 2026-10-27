@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_trip-hop",
+  "name": "Trip-Hop",
+  "type": "genre",
+  "color": "#50747C",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/27.jpg",
+  "description": "Slow smoky breakbeats, dark orchestral strings, sultry cinematic vocals.",
+  "tags": [
+    "bristol-sound",
+    "smoky",
+    "slow-breaks",
+    "orchestral"
+  ],
+  "crateIndex": 27,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/3f7d325a-ec6c-4226-82a4-768b4f2ae6d5.jpg",
+  "sourceGenres": [
+    {
+      "id": "15af7aa8-03a4-44b9-b5ac-ae3a20a67649",
+      "name": "orchestral",
+      "slug": "orchestral"
+    }
+  ]
+}

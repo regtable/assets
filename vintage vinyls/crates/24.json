@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_vaporwave",
+  "name": "Vaporwave",
+  "type": "genre",
+  "color": "#818cf8",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/24.jpg",
+  "description": "Slowed down smooth jazz chops, pitch-shifted 80s pop, nostalgic aesthetic.",
+  "tags": [
+    "slowed-reverb",
+    "chopped-sampled",
+    "nostalgic",
+    "mallsoft"
+  ],
+  "crateIndex": 24,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/8cce7c26-a741-4b7e-80cc-dbe6574b5668.jpg",
+  "sourceGenres": [
+    {
+      "id": "eb83f529-19b8-4bbb-97b6-2cebff0ff907",
+      "name": "mallsoft",
+      "slug": "mallsoft"
+    }
+  ]
+}

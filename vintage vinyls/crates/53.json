@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gear_piano",
+  "name": "Grand Piano Stems",
+  "type": "genre",
+  "color": "#b97654",
+  "description": "Isolated grand piano performances; no accompaniment.",
+  "tags": [
+    "grand piano",
+    "isolated instrument",
+    "no accompaniment"
+  ],
+  "stemInstrument": "grand piano",
+  "stemVariants": [
+    "lyrical arpeggios",
+    "jazz chord voicings",
+    "minimal repeating motif"
+  ],
+  "crateIndex": 53,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/53.jpg"
+}

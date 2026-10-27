@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "genre_house",
+  "name": "House Music",
+  "type": "genre",
+  "color": "#00b4d8",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/41.jpg",
+  "description": "Soulful vocal chops, jackin' 909 drums, deep piano stabs.",
+  "tags": [
+    "deep-house",
+    "tech-house",
+    "vocal-chop",
+    "909-groove"
+  ],
+  "crateIndex": 41,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/0ead91d2-6260-41c1-abcf-e0c572d8b764.jpg",
+  "sourceGenres": [
+    {
+      "id": "21f4d7c0-98c2-4127-8e5e-8f8360861ee3",
+      "name": "deep house",
+      "slug": "deep-house"
+    },
+    {
+      "id": "27016ea0-9d5a-440f-9064-2e457d739561",
+      "name": "tech house",
+      "slug": "tech house"
+    }
+  ]
+}

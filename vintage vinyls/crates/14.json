@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "era_2020s",
+  "name": "2020s Modern",
+  "type": "era",
+  "color": "#00F140",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/14.jpg",
+  "description": "Hyperpop energy, jersey club beats, alt-R&B, and dark synth revivals.",
+  "yearRange": [
+    2020,
+    2026
+  ],
+  "tags": [
+    "hyperpop",
+    "jersey-club",
+    "afrobeats",
+    "phonk",
+    "alt-pop"
+  ],
+  "crateIndex": 14,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/9709e503-611f-4bb0-9540-a4c26f2335aa.jpg",
+  "sourceGenres": [
+    {
+      "id": "103a50c2-4b9d-477d-a318-60987a1e53b3",
+      "name": "hyperpop",
+      "slug": "hyperpop"
+    },
+    {
+      "id": "fb92e0b4-0d55-46bc-8d12-7959010e25f9",
+      "name": "jersey club",
+      "slug": "jersey-club"
+    },
+    {
+      "id": "3abb8394-f017-4d63-9279-2e79db4845f1",
+      "name": "afrobeats",
+      "slug": "afrobeats"
+    },
+    {
+      "id": "04dd7a3c-624b-4383-9053-3a92e6384cd1",
+      "name": "phonk",
+      "slug": "phonk"
+    }
+  ]
+}

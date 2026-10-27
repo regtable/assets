@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "era_2010s",
+  "name": "2010s Digital",
+  "type": "era",
+  "color": "#A56ED8",
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/13.jpg",
+  "description": "EDM festival drops, chillwave vibes, cloud rap, and bedroom pop.",
+  "yearRange": [
+    2010,
+    2019
+  ],
+  "tags": [
+    "chillwave",
+    "trap",
+    "future-bass",
+    "indie-pop",
+    "synthwave"
+  ],
+  "crateIndex": 13,
+  "bannerFallbackUrl": "https://storage.googleapis.com/producer-app-public/assets/6437863a-3eaa-471c-9a2b-a945bba45254.jpg",
+  "sourceGenres": [
+    {
+      "id": "a2f0dcc6-6b93-46e8-a9c9-49c2f3cb6b95",
+      "name": "chillwave",
+      "slug": "chillwave"
+    },
+    {
+      "id": "97c617df-342e-41e2-8d66-8eeec1b9ddb2",
+      "name": "trap",
+      "slug": "trap"
+    },
+    {
+      "id": "64cea5c8-d749-422f-830c-bba388b25505",
+      "name": "future bass",
+      "slug": "future bass"
+    },
+    {
+      "id": "ad7136fd-8ade-4265-b0fe-e8ebc379389d",
+      "name": "indie pop",
+      "slug": "indie-pop"
+    },
+    {
+      "id": "44a697ef-f61c-4ac6-93a5-29a98cc0c26c",
+      "name": "synthwave",
+      "slug": "synthwave"
+    }
+  ]
+}

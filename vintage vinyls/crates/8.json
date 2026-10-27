@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "era_1970s",
+  "name": "1970s Progressive Odyssey",
+  "type": "era",
+  "color": "#d97706",
+  "description": "Long-form progressive arrangements, warm analog keyboards, intricate drums and expressive guitar.",
+  "tags": [
+    "progressive rock",
+    "art rock"
+  ],
+  "yearRange": [
+    1970,
+    1979
+  ],
+  "crateIndex": 8,
+  "bannerImageUrl": "https://raw.githubusercontent.com/regtable/assets/main/vintage%20vinyls/crates/8.jpg",
+  "sourceGenres": [
+    {
+      "id": "1d721032-2fff-45d8-a53f-26f167e4168e",
+      "name": "progressive rock",
+      "slug": "progressive rock"
+    },
+    {
+      "id": "9621a3ab-ed60-4986-9392-39d5b28f0929",
+      "name": "art rock",
+      "slug": "art rock"
+    }
+  ]
+}
