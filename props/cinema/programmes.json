@@ -1,0 +1,7 @@
+{
+  "epochUTC": "2026-01-01T00:00:00Z",
+  "screens": [
+    {"cycleSeconds": 300, "links": [], "fallbackText": "SCREEN 1 · PROGRAMME COMING SOON"},
+    {"cycleSeconds": 300, "links": [], "fallbackText": "SCREEN 2 · PROGRAMME COMING SOON"}
+  ]
+}
