@@ -24,7 +24,10 @@ export function createZenCorner(options: ZenCornerOptions = {}):ZenCornerInstanc
  for (const [key,values] of Object.entries(DATA.geometry)) { const g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.Float32BufferAttribute(values,3)); g.computeVertexNormals(); geometries.set(key,g); }
  const materials = DATA.colors.map(c => new THREE.MeshStandardMaterial({color:new THREE.Color(c[0],c[1],c[2]),roughness:.75,transparent:c[3]<1,opacity:c[3]}));
  const obstacles:THREE.Mesh[]=[];
- for (const [name,key,mat,matrix] of DATA.objects) { const mesh=new THREE.Mesh(geometries.get(key)!,materials[mat]); mesh.name=name; mesh.matrixAutoUpdate=false; mesh.matrix.fromArray(matrix as unknown as number[]); mesh.receiveShadow=true; model.add(mesh); if(isObstacle(name))obstacles.push(mesh); }
+ const eastGate=new THREE.Group(), westGate=new THREE.Group();
+ eastGate.name='Gate hinge east'; westGate.name='Gate hinge west';
+ eastGate.position.set(4,0,-20); westGate.position.set(8,0,-20); model.add(eastGate,westGate);
+ for (const [name,key,mat,matrix] of DATA.objects) { const mesh=new THREE.Mesh(geometries.get(key)!,materials[mat]); mesh.name=name; mesh.matrixAutoUpdate=false; mesh.matrix.fromArray(matrix as unknown as number[]); mesh.receiveShadow=true; const hinge=name.startsWith('GATE | east leaf |') ? eastGate : name.startsWith('GATE | west leaf |') ? westGate : null; if(hinge){ mesh.matrix.premultiply(new THREE.Matrix4().makeTranslation(-hinge.position.x,0,-hinge.position.z)); hinge.add(mesh); } else model.add(mesh); if(isObstacle(name))obstacles.push(mesh); }
  // Blender's ground plane becomes X=-15..27, Z=-40..20 after its Z-up conversion.
  // Translate as a group to the game's X=-15..27, Z=-20..40 site. Custom positions centre the site.
  model.position.set(0,.005,20);
@@ -33,6 +36,17 @@ export function createZenCorner(options: ZenCornerOptions = {}):ZenCornerInstanc
  if(options.scale!==undefined)group.scale.setScalar(options.scale);
  let state:"ready"|"disposed"='ready'; const ready=Promise.resolve(model as THREE.Group|null);
  const bounds=obstacles.map(()=>new THREE.Box3());
+ const localPlayer=new THREE.Vector3(); let holdOpen=0; let gateAngle=0;
+ function update(delta:number, playerPos:THREE.Vector3):void {
+  if(state==='disposed'||!playerPos)return;
+  model.updateWorldMatrix(true,false); localPlayer.copy(playerPos); model.worldToLocal(localPlayer);
+  const near=Math.abs(localPlayer.x-6)<=4.2 && Math.abs(localPlayer.z+20)<=2.5 && localPlayer.y<3.2;
+  const step=Math.max(0,Math.min(delta,.1));
+  if(near)holdOpen=2; else holdOpen=Math.max(0,holdOpen-step);
+  const target=holdOpen>0?Math.PI/2:0; const travel=step*1.8;
+  gateAngle += Math.max(-travel,Math.min(travel,target-gateAngle));
+  eastGate.rotation.y=-gateAngle; westGate.rotation.y=gateAngle;
+ }
  function checkCollision(candidate:THREE.Vector3,_current:THREE.Vector3,radius:number):boolean {
   if(state==='disposed')return false;group.updateWorldMatrix(true,true);
   for(let i=0;i<obstacles.length;i++){ const b=bounds[i].setFromObject(obstacles[i]);
@@ -42,5 +56,5 @@ export function createZenCorner(options: ZenCornerOptions = {}):ZenCornerInstanc
  }
  function dispose(){ if(state==='disposed')return;state='disposed';for(const g of geometries.values())g.dispose();for(const m of materials)m.dispose();group.removeFromParent();group.clear(); }
  options.onLoad?.(model);
- return {group,ready,update:()=>{},checkCollision,dispose,get status(){return state;}};
+ return {group,ready,update,checkCollision,dispose,get status(){return state;}};
 }
