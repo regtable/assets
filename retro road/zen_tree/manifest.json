@@ -1,9 +1,11 @@
 {
   "name": "zen_tree",
-  "moduleUrl": "https://cdn.jsdelivr.net/gh/regtable/assets@95079f9e76d8375a42cb8ed9c0ba9311f055084f/retro%20road/zen_tree/zen_tree.mjs",
+  "moduleUrl": "https://cdn.jsdelivr.net/gh/regtable/assets@main/retro%20road/zen_tree/zen_tree.mjs",
   "glbUrl": "https://cdn.jsdelivr.net/gh/regtable/assets@95079f9e76d8375a42cb8ed9c0ba9311f055084f/retro%20road/zen_tree/zen_tree.glb",
-  "petalEmitterUrl": "https://cdn.jsdelivr.net/gh/regtable/assets@95079f9e76d8375a42cb8ed9c0ba9311f055084f/retro%20road/zen_corner/petal_emitter.mjs",
-  "version": "95079f9e76d8375a42cb8ed9c0ba9311f055084f",
+  "petalEmitterUrl": "https://cdn.jsdelivr.net/gh/regtable/assets@main/retro%20road/zen_corner/petal_emitter.mjs",
+  "version": "procedural-v1",
+  "runtimeMode": "procedural",
+  "glbPurpose": "offline Blender import",
   "coordinateSystem": "Y-up",
   "units": "metres"
 }
