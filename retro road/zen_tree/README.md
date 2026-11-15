@@ -1,64 +1,64 @@
-# Zen Tree (standalone)
+# Zen Tree standalone
+This is the **Zen Tree**, not **Zen Corner**. The old garden, Zen Corner,
+and Blender GLB files remain untouched.
 
-This asset is **the tree, not Zen Corner**. It is a standalone raised-planter
-sakura tree extracted from the tree-only part of `ZenGarden_clean.ts`.
-Nothing in `retro road/zen_corner` is changed by this addition.
+## Runtime: use the module, not the GLB
+`zen_tree.mjs` runs the original tree-construction routines from
+`ZenGarden_clean.ts` (planter, trunk, scaffold branches, sakura canopy).
+It imports the independent `../zen_corner/petal_emitter.mjs`, then attaches
+a cherry-petal emitter when `createZenTree()` is called, unless
+`petals: false` is passed. The creation call is **synchronous**.
+It does **not** use GLTFLoader, fetch the GLB, or create another render loop.
 
-## Files
+Use this in the game's `main.ts` (or equivalent scene integration file):
 
-- `zen_tree.glb` — static, Y-up, metre-scale planter, soil, tree trunk,
-  original branch scaffold, and bronze/gold sakura canopy.
-- `zen_tree.mjs` — ES module that loads the GLB and attaches an **independent**
-  `../zen_corner/petal_emitter.mjs` via its `createPetalEmitter` export.
-- `manifest.json` — URLs for loader, GLB, and emitter, plus pinned version.
+```ts
+const manifestUrl = 'https://cdn.jsdelivr.net/gh/regtable/assets@main/retro%20road/zen_tree/manifest.json';
+const response = await fetch(manifestUrl);
+if (!response.ok) throw new Error('Could not fetch Zen Tree manifest');
+const manifest = await response.json();
+const { createZenTree } = await import(/* @vite-ignore */ manifest.moduleUrl);
 
-The falling petals are **not baked into the GLB**. The existing reusable
-petal emitter is loaded separately. The emitter can use cherry, maple, oak,
-ginkgo, birch and willow geometry.
-
-## Integration (after removing the old in-scene Zen Tree)
-
-```js
-import { loadZenTree } from 'ZEN_TREE_MODULE_URL';
-
-// Provide the GLTFLoader from the running app; do not load a second copy
-// of Three.js or replace the existing scene renderer.
-const tree = await loadZenTree({
-  loader: existingGltfLoader,
-  scene,
-  position: [-23.2, 0.06, -15], // sample: original garden (-25,0,-15) + tree offset
+const zenTree = createZenTree({
+  position: new THREE.Vector3(-23.2, 0.06, -15),
+  // scene, // optional: pass scene here or attach below
   petals: true,
   emitterOptions: { shape: 'cherry', count: 160 }
 });
+scene.add(zenTree.group);
 
-// Call once per render frame, in seconds:
-tree.update(deltaSeconds);
+// Inside the EXISTING game loop:
+zenTree.update(deltaSeconds);
 
-// On removal:
-tree.dispose();
+// Your existing collision check can call:
+// zenTree.checkCollision(playerPosition, playerRadius);
+
+// On unloading this scene or removing the tree:
+zenTree.dispose();
 ```
 
-`loadZenTree` returns a Promise; no module creates a tree at import time.
-Remove the prior tree from the scene before adding this one to avoid a duplicate
-and dispose the old emitter if the old garden code still owns one.
+Ensure the old in-scene Zen Tree and its old falling-petal update are removed
+to prevent duplicates. Do not remove Zen Corner.
 
-Pass `petals: false` for the GLB alone; you can also override
-`emitterModuleUrl`, inject `emitterFactory`, or pass custom
-`emitterOptions` to change colours/leaf geometry/wind.
+`createZenTree` optionally accepts `emitterFactory`, `emitterOptions`,
+`materials` (override treeBarkMat/pottingSoilMat/darkGoldTrimMat),
+`rotationY`, `scale`, `position` and `scene`. The new tree origin
+is the planter base at local [0,0,0]. The example location above matches
+the original garden origin (-25,0,-15) plus its local tree offset
+(1.8,0.06,0).
 
-Default diagnostic modes: `NORMAL`, `NO CANOPY`, `PAUSE PETALS`, `TREE OFF`
-(and legacy `GARDEN OFF` alias). Collision checks use the planter's ~1.8m
-radius in XZ.
+Returned instance: `{ group, emitter, update, checkCollision,
+setDiagnosticMode, getDiagnosticMode, setPosition, setWind, dispose }`.
+You can independently import `petal_emitter.mjs` for other foliage effects.
+Future non-foliage emitters (e.g. leaks) can reuse the same approach but
+will require appropriate particle geometry/material and motion.
 
-## Fidelity and placement
+## Blender only
+`zen_tree.glb` is the separate static mesh for daily Blender scene exports.
+It is not loaded by `zen_tree.mjs` and does not contain animated petals.
 
-The raised planter, 0.30m trunk, nine original bough centerlines and canopy
-cluster arrangement follow the original source. The original `./trim`
-material module and runtime canvas blossom texture were not part of the
-shared input, so the GLB uses reconstructed bronze/gold PBR finishes and
-procedural static blossom polygons instead of those exact textures.
-The new tree's root is **centred on its planter at ground level**, rather
-than inheriting the old garden's (x=1.8m, y=0.06m) local offset.
-
-This migration does not change or remove the old tree instance from the
-application; host scene integration is intentionally left to the app owner.
+## Fidelity
+The tree source geometry and procedural blossom canvas are preserved from
+the submitted TypeScript, but `./trim` was not supplied, so original
+external bark/soil/gold materials are approximated unless injected.
+The separately generated Blender GLB remains the static approximation.
