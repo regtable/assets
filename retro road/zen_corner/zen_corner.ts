@@ -27,6 +27,19 @@ export function createExportedScene(options:SceneOptions={}):SceneInstance {
 
  // Lightweight water animation: no fluid simulation or mesh cache.
  const poolSurface = model.getObjectByName('PADDLING POOL | shallow water surface') as THREE.Mesh | undefined;
+ const poolWaveTime={value:0};
+ if(poolSurface){
+  const material=poolSurface.material as THREE.MeshStandardMaterial;
+  material.onBeforeCompile=shader=>{
+   shader.uniforms.zenPoolTime=poolWaveTime;
+   shader.vertexShader='varying vec3 zenPoolPosition;\n'+shader.vertexShader;
+   shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nzenPoolPosition=(modelMatrix*vec4(transformed,1.0)).xyz;');
+   shader.fragmentShader='uniform float zenPoolTime; varying vec3 zenPoolPosition;\n'+shader.fragmentShader;
+   shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_maps>','#include <normal_fragment_maps>\nfloat wx=sin(zenPoolPosition.x*7.0+zenPoolPosition.z*3.0-zenPoolTime*1.4);\nfloat wz=cos(zenPoolPosition.z*9.0-zenPoolPosition.x*2.0-zenPoolTime*1.1);\nnormal=normalize(normal+(viewMatrix*vec4(wx*0.10,0.0,wz*0.10,0.0)).xyz);');
+  };
+  material.customProgramCacheKey=()=> 'zen-pool-ripples-v1';
+  material.needsUpdate=true;
+ }
  const waterfalls = model.children.filter(o=>o.name.startsWith('WATERFALL | static water curtain preview ')) as THREE.Mesh[];
  let waterfallRemaining=300, waterClock=0;
  const ringGeometry=new THREE.RingGeometry(.12,.16,32);
@@ -34,9 +47,9 @@ export function createExportedScene(options:SceneOptions={}):SceneInstance {
  function startWaterfall(seconds=300){waterfallRemaining=Math.max(0,seconds);}
  function stopWaterfall(){waterfallRemaining=0;for(const mesh of waterfalls)mesh.visible=false;for(const ring of splashRings)ring.visible=false;}
  function updateWaterfall(delta=0){
-  const dt=Math.max(0,delta);waterClock+=dt;waterfallRemaining=Math.max(0,waterfallRemaining-dt);const running=waterfallRemaining>0;
-  for(const mesh of waterfalls){mesh.visible=running;const m=mesh.material as THREE.MeshStandardMaterial;const tex=m&&m.map;if(tex){tex.wrapS=THREE.RepeatWrapping;tex.wrapT=THREE.RepeatWrapping;if(running)tex.offset.y-=dt*.55;}}
-  if(poolSurface){const m=poolSurface.material as THREE.MeshStandardMaterial;const tex=m&&m.map;if(tex){tex.wrapS=THREE.RepeatWrapping;tex.wrapT=THREE.RepeatWrapping;tex.offset.x+=dt*.008;tex.offset.y+=dt*.004;}}
+  const dt=Math.max(0,delta);waterClock+=dt;poolWaveTime.value=waterClock;waterfallRemaining=Math.max(0,waterfallRemaining-dt);const running=waterfallRemaining>0;
+  for(const mesh of waterfalls){mesh.visible=running;const m=mesh.material as THREE.MeshStandardMaterial;const tex=m&&m.map;if(tex){tex.wrapS=THREE.RepeatWrapping;tex.wrapT=THREE.RepeatWrapping;if(running)tex.offset.y+=dt*.55;}}
+  if(poolSurface){const m=poolSurface.material as THREE.MeshStandardMaterial;const tex=m&&m.map;if(tex){tex.wrapS=THREE.RepeatWrapping;tex.wrapT=THREE.RepeatWrapping;tex.offset.x+=dt*.008;tex.offset.y+=dt*.004;}if(m&&m.normalMap){m.normalMap.wrapS=THREE.RepeatWrapping;m.normalMap.wrapT=THREE.RepeatWrapping;m.normalMap.offset.x-=dt*.018;m.normalMap.offset.y+=dt*.012;}}
   splashRings.forEach((ring,i)=>{ring.visible=running;const phase=(waterClock*.7+i/2)%1;ring.scale.setScalar(.5+phase*3);ring.material.opacity=(1-phase)*.7;});
  }
 
