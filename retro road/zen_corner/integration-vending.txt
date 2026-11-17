@@ -1,0 +1,26 @@
+One-time Space integration (not yet applied to the live Space)
+
+1. Keep the existing @flowmusic/sdk imports in the Space. Pass generateSong and generateImage into each loaded scene:
+   generators: { song: generateSong, image: generateImage }
+   onGenerated: (result, context) => {
+     if (context.type === 'song') onSongGenerated(result);
+   }
+   onInteractionError: error => show the error in the existing UI.
+
+2. Pass the existing main.tsx handleSongGenerated callback through RecordStoreCanvas to the scene options. Live V9 main.tsx handleSongGenerated calls setActiveClip(clip), setIsAudioPlaying(true), and deduplicates the clip into recentClips. No queue/enqueue function exists in the inspected live source. Reuse this callback and player. The audio element currently renders only inside the music shop or studio; add explicit garden-generation playback scope so vending-generated tracks remain playable outside those buildings, without changing the existing radio behavior or autoplaying on scene load. Forward callbacks through refs so state changes do not rebuild the Three.js scene.
+
+3. In performPick, after inspect mode exits and within the existing interaction distance check:
+   if (firstHit.distance <= 7 && zenCorner.handleClick?.(firstHit.object)) return;
+   For multiple external scenes, iterate their handleClick functions.
+
+4. Blender object custom properties:
+   interaction_action = generate_song (legacy action marker; generation_type selects service)
+   generation_type = song | image | video
+   interaction_prompt = prompt string
+   interaction_title = optional title
+   generation_aspect_ratio = 1:1 (image/video)
+   Songs send soundPrompt and title only, no lyrics.
+
+Video is an adapter slot, not a verified SDK integration. Supply generators.video only after checking the real SDK signature and translating prompt/aspectRatio as required. Unsupported services report an error.
+
+The four vending buttons are all song tests, including the prompts 'out of service' and 'out of stock'. They are not disabled status buttons. Duplicate presses on a pending button are ignored.
