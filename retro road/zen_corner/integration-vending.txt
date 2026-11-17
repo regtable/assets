@@ -1,4 +1,5 @@
-One-time Space integration (not yet applied to the live Space)
+One-time Space integration applied to saved Flow Space V14 on 2026-11-17.
+Verified saved source and running preview after Flow chat-stream errors. Song generation and audio playback have not been exercised with a paid live generation. V14 is available in the session preview; public Space publishing was not performed.
 
 1. Keep the existing @flowmusic/sdk imports in the Space. Pass generateSong and generateImage into each loaded scene:
    generators: { song: generateSong, image: generateImage }
@@ -21,6 +22,6 @@ One-time Space integration (not yet applied to the live Space)
    generation_aspect_ratio = 1:1 (image/video)
    Songs send soundPrompt and title only, no lyrics.
 
-Video is an adapter slot, not a verified SDK integration. Supply generators.video only after checking the real SDK signature and translating prompt/aspectRatio as required. Unsupported services report an error.
+The saved V14 host imports generateSong, generateImage and generateVideo from @flowmusic/sdk. Preview loads without an import error. Video generation itself has not been tested; the exporter accepts an adapter using prompt/aspectRatio. Unsupported services report an error.
 
 The four vending buttons are all song tests, including the prompts 'out of service' and 'out of stock'. They are not disabled status buttons. Duplicate presses on a pending button are ignored.
