@@ -1,0 +1,7 @@
+TEST RELEASE ONLY. Main manifest.json is unchanged.
+
+Blender source: site_zen_audio_zone.blend. Empty: AUDIO ZONE | Zen garden. Exporter checkbox: Audio playback zone (Cube empty). Hidden-render empties still export behavioral metadata.
+
+createZenCorner({onAudioZoneChange: inside => existingHostOccupancyCallback(inside), generators, onGenerated, onInteractionError}). The existing update(delta, camera.position) drives the zone. No host coordinate constants. Callback reports initial occupancy and transitions; leaving or disposing the scene reports false. Host must pause/clear only audio owned by this scene, and avoid autoplay for generation finishing after exit.
+
+Use manifest-audio-zone-test.json in the TEST Space, not the main manifest. Four vending prompts remain soundPrompt-only. No live paid generation tested.
