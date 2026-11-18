@@ -1,0 +1,343 @@
+{
+  "version": 1,
+  "asset": "dinerDining.glb",
+  "coordinateSystem": "threejs-world-xz",
+  "units": "meters",
+  "colliders": [
+    {
+      "id": "counter-horizontal",
+      "type": "box",
+      "center": [
+        -87.326,
+        0.525,
+        -43
+      ],
+      "size": [
+        2.912,
+        1.05,
+        0.84
+      ]
+    },
+    {
+      "id": "counter-vertical",
+      "type": "box",
+      "center": [
+        -85.475,
+        0.525,
+        -45.405
+      ],
+      "size": [
+        0.79,
+        1.05,
+        5.65
+      ]
+    },
+    {
+      "id": "ice-cream-counter",
+      "type": "box",
+      "center": [
+        -91.867,
+        0.525,
+        -43
+      ],
+      "size": [
+        2.17,
+        1.05,
+        0.84
+      ]
+    },
+    {
+      "id": "beverage-station",
+      "type": "box",
+      "center": [
+        -91.867,
+        0.525,
+        -40.95
+      ],
+      "size": [
+        2.17,
+        1.05,
+        0.52
+      ]
+    },
+    {
+      "id": "cashier-counter",
+      "type": "box",
+      "center": [
+        -84.57,
+        0.525,
+        -50.54
+      ],
+      "size": [
+        2.7,
+        1.05,
+        0.62
+      ]
+    },
+    {
+      "id": "counter-stool-1",
+      "type": "cylinder",
+      "center": [
+        -86.28,
+        0.38,
+        -43.75
+      ],
+      "radius": 0.28,
+      "height": 0.76
+    },
+    {
+      "id": "counter-stool-2",
+      "type": "cylinder",
+      "center": [
+        -86.28,
+        0.38,
+        -44.75
+      ],
+      "radius": 0.28,
+      "height": 0.76
+    },
+    {
+      "id": "counter-stool-3",
+      "type": "cylinder",
+      "center": [
+        -86.28,
+        0.38,
+        -45.75
+      ],
+      "radius": 0.28,
+      "height": 0.76
+    },
+    {
+      "id": "counter-stool-4",
+      "type": "cylinder",
+      "center": [
+        -86.28,
+        0.38,
+        -46.75
+      ],
+      "radius": 0.28,
+      "height": 0.76
+    },
+    {
+      "id": "counter-stool-5",
+      "type": "cylinder",
+      "center": [
+        -86.28,
+        0.38,
+        -47.75
+      ],
+      "radius": 0.28,
+      "height": 0.76
+    },
+    {
+      "id": "booth-double-1",
+      "type": "box",
+      "center": [
+        -91.867,
+        0.6475,
+        -56.717
+      ],
+      "size": [
+        2.17,
+        1.295,
+        1.38
+      ]
+    },
+    {
+      "id": "booth-double-2",
+      "type": "box",
+      "center": [
+        -91.867,
+        0.6475,
+        -54.507
+      ],
+      "size": [
+        2.17,
+        1.295,
+        1.38
+      ]
+    },
+    {
+      "id": "booth-double-3",
+      "type": "box",
+      "center": [
+        -91.867,
+        0.6475,
+        -52.297
+      ],
+      "size": [
+        2.17,
+        1.295,
+        1.38
+      ]
+    },
+    {
+      "id": "booth-double-4",
+      "type": "box",
+      "center": [
+        -91.867,
+        0.6475,
+        -50.087
+      ],
+      "size": [
+        2.17,
+        1.295,
+        1.38
+      ]
+    },
+    {
+      "id": "booth-double-5",
+      "type": "box",
+      "center": [
+        -91.867,
+        0.6475,
+        -47.877
+      ],
+      "size": [
+        2.17,
+        1.295,
+        1.38
+      ]
+    },
+    {
+      "id": "booth-double-6",
+      "type": "box",
+      "center": [
+        -91.867,
+        0.6475,
+        -45.667
+      ],
+      "size": [
+        2.17,
+        1.295,
+        1.38
+      ]
+    },
+    {
+      "id": "booth-single-1",
+      "type": "box",
+      "center": [
+        -91.867,
+        0.6475,
+        -58.597
+      ],
+      "size": [
+        2.17,
+        1.295,
+        0.72
+      ]
+    },
+    {
+      "id": "booth-single-2",
+      "type": "box",
+      "center": [
+        -91.867,
+        0.6475,
+        -43.787
+      ],
+      "size": [
+        2.17,
+        1.295,
+        0.72
+      ]
+    },
+    {
+      "id": "dining-table-1",
+      "type": "box",
+      "center": [
+        -91.905,
+        0.72,
+        -57.835
+      ],
+      "size": [
+        1.98,
+        0.08,
+        0.75
+      ]
+    },
+    {
+      "id": "dining-table-2",
+      "type": "box",
+      "center": [
+        -91.905,
+        0.72,
+        -55.625
+      ],
+      "size": [
+        1.98,
+        0.08,
+        0.75
+      ]
+    },
+    {
+      "id": "dining-table-3",
+      "type": "box",
+      "center": [
+        -91.905,
+        0.72,
+        -53.415
+      ],
+      "size": [
+        1.98,
+        0.08,
+        0.75
+      ]
+    },
+    {
+      "id": "dining-table-4",
+      "type": "box",
+      "center": [
+        -91.905,
+        0.72,
+        -51.205
+      ],
+      "size": [
+        1.98,
+        0.08,
+        0.75
+      ]
+    },
+    {
+      "id": "dining-table-5",
+      "type": "box",
+      "center": [
+        -91.905,
+        0.72,
+        -48.995
+      ],
+      "size": [
+        1.98,
+        0.08,
+        0.75
+      ]
+    },
+    {
+      "id": "dining-table-6",
+      "type": "box",
+      "center": [
+        -91.905,
+        0.72,
+        -46.785
+      ],
+      "size": [
+        1.98,
+        0.08,
+        0.75
+      ]
+    },
+    {
+      "id": "dining-table-7",
+      "type": "box",
+      "center": [
+        -91.905,
+        0.72,
+        -44.575
+      ],
+      "size": [
+        1.98,
+        0.08,
+        0.75
+      ]
+    }
+  ]
+}
