@@ -4,6 +4,12 @@ export async function createFleet(group, loader) {
   const xs = [-27.5,-20], parked = -13.5
   const models = await Promise.all([pickup(loader),pump(loader)])
   const routes = xs.map(x => [[x,parked],[x,-29],[x+2,-32.7],[92,-32.7],[100,-32.7],[100,-30],[92,-30],[x+3,-30],[x,-28],[x,parked]])
+  const siren = new Audio(new URL('./weewoo.mp3', import.meta.url).href)
+  siren.loop = true
+  siren.volume = 0
+  const unlock = () => { siren.play().catch(() => {}) }
+  window.addEventListener('pointerdown', unlock)
+  window.addEventListener('keydown', unlock)
   const queue = [], wheels = [], beacons = []
   let active = -1, leg = 1, pause = 0, elapsed = 0, disposed = false
   models.forEach((m,i) => {
@@ -19,10 +25,15 @@ export async function createFleet(group, loader) {
   const onDispatch=e=>dispatch(e.detail?.vehicle==='pickup'?0:e.detail?.vehicle==='pump'?1:e.detail?.vehicle)
   window.addEventListener('fire-dispatch',onDispatch)
   return {dispatch, needsDoor:i=>active===i&&(leg<=2||leg>=8),
-    update(dt,doors){
+    update(dt,doors,playerPos,muted=true){
+      siren.volume = 0
       if(disposed)return
       if(active<0){if(!queue.length)return;active=queue.shift();leg=1;elapsed=0}
       const i=active,m=models[i]; elapsed+=dt
+      const distance = playerPos ? Math.hypot(playerPos.x-m.position.x, playerPos.z-m.position.z) : Infinity
+      const audible = !muted && leg>=2 && leg<=8 && m.position.x<95
+      siren.volume = audible ? 0.3 / (1 + (distance/12)**2) : 0
+      if (audible && siren.paused) siren.play().catch(() => {})
       beacons[i].forEach((b,j)=>{if(b.material.emissive){b.material.emissive.setHex(0x006aff);b.material.emissiveIntensity=(Math.floor(elapsed*6)+j)%2?3:0}})
       if((leg===1||leg===9)&&doors[i]<.96)return
       if(pause>0){pause-=dt;return}
@@ -34,7 +45,7 @@ export async function createFleet(group, loader) {
       if(len<=travel+.0001){if(leg===4)pause=5
         if(++leg===routes[i].length){m.rotation.y=0;beacons[i].forEach(b=>b.material.emissiveIntensity=0);active=-1}}
     },
-    dispose(){disposed=true;window.removeEventListener('fire-dispatch',onDispatch);const resources=new Set()
+    dispose(){disposed=true;siren.pause();siren.removeAttribute('src');siren.load();window.removeEventListener('pointerdown',unlock);window.removeEventListener('keydown',unlock);window.removeEventListener('fire-dispatch',onDispatch);const resources=new Set()
       models.forEach(m=>{group.remove(m);m.traverse(o=>{if(o.geometry)resources.add(o.geometry);for(const mat of [].concat(o.material||[]))resources.add(mat)})});resources.forEach(r=>r.dispose())}
   }
 }
