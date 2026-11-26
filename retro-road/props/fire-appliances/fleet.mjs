@@ -6,10 +6,11 @@ export async function createFleet(group, loader) {
   const routes = xs.map(x => [[x,parked],[x,-29],[x+2,-32.7],[92,-32.7],[100,-32.7],[100,-30],[92,-30],[x+3,-30],[x,-28],[x,parked]])
   const siren = new Audio(new URL('./weewoo.mp3', import.meta.url).href)
   siren.loop = true
+  siren.muted = true
   siren.volume = 0
-  const unlock = () => { siren.play().catch(() => {}) }
-  window.addEventListener('pointerdown', unlock)
-  window.addEventListener('keydown', unlock)
+  const silenceSiren = () => { siren.muted = true; siren.pause(); siren.volume = 0 }
+  const onVisibilityChange = () => { if (document.hidden) silenceSiren() }
+  document.addEventListener('visibilitychange', onVisibilityChange)
   const queue = [], wheels = [], beacons = []
   let active = -1, leg = 1, pause = 0, elapsed = 0, disposed = false
   models.forEach((m,i) => {
@@ -26,14 +27,16 @@ export async function createFleet(group, loader) {
   window.addEventListener('fire-dispatch',onDispatch)
   return {dispatch, needsDoor:i=>active===i&&(leg<=2||leg>=8),
     update(dt,doors,playerPos,muted=true){
-      siren.volume = 0
       if(disposed)return
-      if(active<0){if(!queue.length)return;active=queue.shift();leg=1;elapsed=0}
+      if(active<0){if(!queue.length){silenceSiren();return}active=queue.shift();leg=1;elapsed=0}
       const i=active,m=models[i]; elapsed+=dt
       const distance = playerPos ? Math.hypot(playerPos.x-m.position.x, playerPos.z-m.position.z) : Infinity
-      const audible = !muted && leg>=2 && leg<=8 && m.position.x<95
-      siren.volume = audible ? 0.3 / (1 + (distance/12)**2) : 0
-      if (audible && siren.paused) siren.play().catch(() => {})
+      const audible = !muted && !document.hidden && Number.isFinite(distance) && distance < 120 && leg>=2 && leg<=8 && m.position.x<95
+      if (audible) {
+        siren.volume = 0.3 / (1 + (distance/12)**2)
+        siren.muted = false
+        if (siren.paused) siren.play().catch(() => {})
+      } else silenceSiren()
       beacons[i].forEach((b,j)=>{if(b.material.emissive){b.material.emissive.setHex(0x006aff);b.material.emissiveIntensity=(Math.floor(elapsed*6)+j)%2?3:0}})
       if((leg===1||leg===9)&&doors[i]<.96)return
       if(pause>0){pause-=dt;return}
@@ -43,9 +46,9 @@ export async function createFleet(group, loader) {
         m.rotation.y=Math.atan2(-dx,-dz)+(leg===9?Math.PI:0)
         wheels[i].forEach(w=>w.rotation.x+=(leg===9?1:-1)*travel/.45)}
       if(len<=travel+.0001){if(leg===4)pause=5
-        if(++leg===routes[i].length){m.rotation.y=0;beacons[i].forEach(b=>b.material.emissiveIntensity=0);active=-1}}
+        if(++leg===routes[i].length){m.rotation.y=0;beacons[i].forEach(b=>b.material.emissiveIntensity=0);active=-1;silenceSiren()}}
     },
-    dispose(){disposed=true;siren.pause();siren.removeAttribute('src');siren.load();window.removeEventListener('pointerdown',unlock);window.removeEventListener('keydown',unlock);window.removeEventListener('fire-dispatch',onDispatch);const resources=new Set()
+    dispose(){disposed=true;silenceSiren();siren.removeAttribute('src');siren.load();document.removeEventListener('visibilitychange',onVisibilityChange);window.removeEventListener('fire-dispatch',onDispatch);const resources=new Set()
       models.forEach(m=>{group.remove(m);m.traverse(o=>{if(o.geometry)resources.add(o.geometry);for(const mat of [].concat(o.material||[]))resources.add(mat)})});resources.forEach(r=>r.dispose())}
   }
 }
