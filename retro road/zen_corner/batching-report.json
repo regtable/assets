@@ -1,0 +1,41 @@
+[
+  {
+    "variant": "zen-monolith",
+    "before": 65,
+    "after": 6,
+    "triangles": 13280,
+    "stats": {
+      "sourceMeshes": 63,
+      "mergedMeshes": 59,
+      "batches": 4,
+      "trianglesBefore": 11792,
+      "trianglesAfter": 11792
+    }
+  },
+  {
+    "variant": "zen-worksite",
+    "before": 215,
+    "after": 42,
+    "triangles": 31356,
+    "stats": {
+      "sourceMeshes": 209,
+      "mergedMeshes": 173,
+      "batches": 36,
+      "trianglesBefore": 23476,
+      "trianglesAfter": 23476
+    }
+  },
+  {
+    "variant": "zen-garden-batched",
+    "before": 2415,
+    "after": 250,
+    "triangles": 3559795,
+    "stats": {
+      "sourceMeshes": 2304,
+      "mergedMeshes": 2165,
+      "batches": 139,
+      "trianglesBefore": 2403655,
+      "trianglesAfter": 2403655
+    }
+  }
+]
