@@ -1,5 +1,6 @@
 {
-  "moduleUrl": "https://cdn.jsdelivr.net/gh/regtable/assets@f0007d3d34116c321512805a2f98aac918138b0a/retro%20road/zen_corner/zen-worksite.mjs",
-  "variant": "worksite",
-  "version": "f0007d3d34116c321512805a2f98aac918138b0a"
+  "moduleUrl": "https://cdn.jsdelivr.net/gh/regtable/assets@a8a03f607994b3f45713c6a824cd9a6178bc4c42/retro%20road/zen_corner/zen-worksite.mjs",
+  "batched": true,
+  "version": "a8a03f607994b3f45713c6a824cd9a6178bc4c42",
+  "variant": "worksite"
 }
