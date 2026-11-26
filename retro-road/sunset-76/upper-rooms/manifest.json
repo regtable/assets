@@ -1,0 +1,13 @@
+{
+  "moduleUrl": "https://cdn.jsdelivr.net/gh/regtable/assets@b3737a5edefa243898196f20706bad2ebcc342c6/retro-road/sunset-76/upper-rooms/hotel76-upstairs.mjs",
+  "rooms": [
+    6,
+    7,
+    8,
+    14,
+    15,
+    16
+  ],
+  "version": "b3737a5edefa243898196f20706bad2ebcc342c6",
+  "channelsUrl": "https://raw.githubusercontent.com/regtable/assets/main/retro-road/sunset-76/upper-rooms/76-tv-channels/channels.json"
+}
