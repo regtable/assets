@@ -1,0 +1,193 @@
+BATCH 31 — apply AFTER cleanup batches 1–19 and record-store batches 20–30. Apply only exact edits; do not rewrite other code. Do not alter Zen loader or any existing architecture. New furnishings are independent external GLB/MJS modules.
+
+FILENAME: hotel76RoomsLoader.ts
+ACTION: CREATE NEW FILE with this entire content:
+```typescript
+import * as THREE from "three";
+import { generateImage, generateSong } from "@flowmusic/sdk";
+
+interface HotelRooms {
+  group: THREE.Object3D;
+  ready: Promise<unknown>;
+  readonly modalOpen: boolean;
+  update(delta: number, player: THREE.Vector3, muted: boolean): void;
+  handleClick(object: THREE.Object3D): boolean;
+  checkCollision(candidate: THREE.Vector3, current: THREE.Vector3, radius: number): boolean;
+  dispose(): void;
+}
+
+const MANIFEST = "https://raw.githubusercontent.com/regtable/assets/main/retro-road/sunset-76/upper-rooms/manifest.json";
+
+export function createHotel76RoomsLoader(scene: THREE.Scene) {
+  let instance: HotelRooms | null = null, disposed = false;
+  const abort = new AbortController();
+  const timeout = setTimeout(() => abort.abort(), 20000);
+  const ready = (async () => {
+    let pending: HotelRooms | null = null;
+    try {
+      const response = await fetch(`${MANIFEST}?t=${Date.now()}`, { cache: "no-store", signal: abort.signal });
+      if (!response.ok) throw new Error(`Hotel manifest HTTP ${response.status}`);
+      const manifest = await response.json();
+      const url = new URL(manifest.moduleUrl);
+      if (url.protocol !== "https:" || !["cdn.jsdelivr.net", "raw.githubusercontent.com"].includes(url.hostname)) throw new Error("Invalid hotel module URL");
+      const module = await import(/* @vite-ignore */ url.href);
+      if (disposed) return;
+      pending = module.createHotel76Upstairs({
+        services: { generateImage, generateSong },
+        onModalChange(open: boolean) { if (open && document.pointerLockElement) document.exitPointerLock(); }
+      });
+      await pending!.ready;
+      if (disposed) { pending!.dispose(); return; }
+      instance = pending; scene.add(instance!.group);
+    } catch (error) { pending?.dispose(); if (!disposed) console.warn("Hotel room assets unavailable; existing hotel stays usable", error); }
+    finally { clearTimeout(timeout); }
+  })();
+  return {
+    ready,
+    get modalOpen() { return instance?.modalOpen ?? false; },
+    update(delta: number, player: THREE.Vector3, muted: boolean) { instance?.update(delta, player, muted); },
+    handleClick(object: THREE.Object3D) { return instance?.handleClick(object) ?? false; },
+    checkCollision(candidate: THREE.Vector3, current: THREE.Vector3, radius: number) { return instance?.checkCollision(candidate, current, radius) ?? false; },
+    dispose() { if (disposed) return; disposed = true; abort.abort(); clearTimeout(timeout); instance?.dispose(); instance = null; }
+  };
+}
+
+```
+
+FILENAME: RecordStoreCanvas.tsx
+OLD TEXT:
+```
+import { createBusStopArea, BusStopAreaInstance } from "./busStop";
+```
+NEW TEXT:
+```
+import { createBusStopArea, BusStopAreaInstance } from "./busStop";
+import { createHotel76RoomsLoader } from "./hotel76RoomsLoader";
+```
+
+FILENAME: RecordStoreCanvas.tsx
+OLD TEXT:
+```
+    scene.add(emsHelicopter.group);
+```
+NEW TEXT:
+```
+    scene.add(emsHelicopter.group);
+    const hotel76Rooms = createHotel76RoomsLoader(scene);
+```
+
+FILENAME: RecordStoreCanvas.tsx
+OLD TEXT:
+```
+      if(firstHit.distance<3&&policeBike?.onBike(firstHit.object))return;
+```
+NEW TEXT:
+```
+      if (firstHit.distance <= 3.5 && hotel76Rooms.handleClick(firstHit.object)) return;
+      if(firstHit.distance<3&&policeBike?.onBike(firstHit.object))return;
+```
+
+FILENAME: RecordStoreCanvas.tsx
+OLD TEXT:
+```
+      const checkCollisionAt = (candidatePos: THREE.Vector3, curPos: THREE.Vector3, playerRadius = 0.35): boolean => {
+```
+NEW TEXT:
+```
+      const checkCollisionAt = (candidatePos: THREE.Vector3, curPos: THREE.Vector3, playerRadius = 0.35): boolean => {
+        if (hotel76Rooms.checkCollision(candidatePos, curPos, playerRadius)) return true;
+```
+
+FILENAME: RecordStoreCanvas.tsx
+OLD TEXT:
+```
+      const delta = Math.min((now - lastTime) / 1000, 0.1); // Clamp max frame time to avoid jumps
+```
+NEW TEXT:
+```
+      const delta = Math.min((now - lastTime) / 1000, 0.1); // Clamp max frame time to avoid jumps
+      hotel76Rooms.update(delta, camera.position, isOutdoorMutedRef.current);
+```
+
+FILENAME: RecordStoreCanvas.tsx
+OLD TEXT:
+```
+      emsHelicopter.dispose();
+```
+NEW TEXT:
+```
+      hotel76Rooms.dispose();
+      emsHelicopter.dispose();
+```
+
+FILENAME: RecordStoreCanvas.tsx
+OLD TEXT:
+```
+    const handleCanvasPointerDown = (e: PointerEvent) => {
+      if (isMenuOpenRef.current) return;
+```
+NEW TEXT:
+```
+    const handleCanvasPointerDown = (e: PointerEvent) => {
+      if (isMenuOpenRef.current || hotel76Rooms.modalOpen) return;
+```
+
+FILENAME: RecordStoreCanvas.tsx
+OLD TEXT:
+```
+    const handleCanvasPointerMove = (e: PointerEvent) => {
+      if (isMenuOpenRef.current) return;
+```
+NEW TEXT:
+```
+    const handleCanvasPointerMove = (e: PointerEvent) => {
+      if (isMenuOpenRef.current || hotel76Rooms.modalOpen) return;
+```
+
+FILENAME: RecordStoreCanvas.tsx
+OLD TEXT:
+```
+    const handleLockedMouseMove = (e: MouseEvent) => {
+      if (isMenuOpenRef.current) return;
+```
+NEW TEXT:
+```
+    const handleLockedMouseMove = (e: MouseEvent) => {
+      if (isMenuOpenRef.current || hotel76Rooms.modalOpen) return;
+```
+
+FILENAME: RecordStoreCanvas.tsx
+OLD TEXT:
+```
+    const handleCanvasClick = (e: MouseEvent) => {
+      if (isMenuOpenRef.current) return;
+```
+NEW TEXT:
+```
+    const handleCanvasClick = (e: MouseEvent) => {
+      if (isMenuOpenRef.current || hotel76Rooms.modalOpen) return;
+```
+
+FILENAME: RecordStoreCanvas.tsx
+OLD TEXT:
+```
+      if (isMenuOpenRef.current) return;
+      const now = performance.now();
+```
+NEW TEXT:
+```
+      if (isMenuOpenRef.current || hotel76Rooms.modalOpen) return;
+      const now = performance.now();
+```
+
+FILENAME: RecordStoreCanvas.tsx
+OLD TEXT:
+```
+      if (isMenuOpenRef.current) {
+        lastTime = performance.now();
+```
+NEW TEXT:
+```
+      if (isMenuOpenRef.current || hotel76Rooms.modalOpen) {
+        lastTime = performance.now();
+```

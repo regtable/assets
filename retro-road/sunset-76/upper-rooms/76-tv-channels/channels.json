@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "imagePromptPrefix": "Use the following schema to infer an image to add for the selected channel as a splash while the song plays.",
+  "channels": [
+    { "id": "crime", "name": "Crime", "prompt": "" },
+    { "id": "nature", "name": "Nature", "prompt": "" },
+    { "id": "i-boop", "name": "i-boop", "prompt": "" },
+    { "id": "i-make", "name": "i-make", "prompt": "" },
+    { "id": "life", "name": "Life", "prompt": "" },
+    { "id": "cosmos", "name": "Cosmos", "prompt": "" },
+    { "id": "after-hours", "name": "After Hours", "prompt": "" }
+  ]
+}
