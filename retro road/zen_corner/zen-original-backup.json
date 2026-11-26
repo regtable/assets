@@ -1,0 +1,22 @@
+{
+  "zen_corner.mjs": {
+    "file": "zen-original.mjs",
+    "sha256": "55d6768ba373aea1b076d598aa1d45150f7b874be57b80561674cbd6ae0be26e",
+    "sourceCommit": "e4e158c916ff356fe8dfdb277cdaa7726c6b5ae0"
+  },
+  "zen_corner.ts": {
+    "file": "zen-original.ts",
+    "sha256": "a0e9dc4364394642b3cfc58544f1ca699d235e48462556fc7e46b98e18a12125",
+    "sourceCommit": "e4e158c916ff356fe8dfdb277cdaa7726c6b5ae0"
+  },
+  "zen corner.glb": {
+    "file": "zen-original.glb",
+    "sha256": "50d4fafd664bac479247fd34bb24e95ca1d73a58e722f2dab287bd48806bed4a",
+    "sourceCommit": "e4e158c916ff356fe8dfdb277cdaa7726c6b5ae0"
+  },
+  "manifest.json": {
+    "file": "manifest-zen-original.json",
+    "sha256": "6eb64eb8e54a8c496791908ee4786d0444265e7b9f81b931d61fc0c4245361eb",
+    "sourceCommit": "e4e158c916ff356fe8dfdb277cdaa7726c6b5ae0"
+  }
+}
