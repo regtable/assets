@@ -1,13 +1,112 @@
 {
-  "version": 1,
+  "version": 2,
   "imagePromptPrefix": "Use the following schema to infer an image to add for the selected channel as a splash while the song plays.",
   "channels": [
-    { "id": "crime", "name": "Crime", "prompt": "" },
-    { "id": "nature", "name": "Nature", "prompt": "" },
-    { "id": "i-boop", "name": "i-boop", "prompt": "" },
-    { "id": "i-make", "name": "i-make", "prompt": "" },
-    { "id": "life", "name": "Life", "prompt": "" },
-    { "id": "cosmos", "name": "Cosmos", "prompt": "" },
-    { "id": "after-hours", "name": "After Hours", "prompt": "" }
+    {
+      "id": "crime",
+      "name": "Crime",
+      "prompt": ""
+    },
+    {
+      "id": "nature",
+      "name": "Nature",
+      "prompt": ""
+    },
+    {
+      "id": "i-boop",
+      "name": "i-boop",
+      "prompt": {
+        "genre": {
+          "primary": "Spoken-word jungle documentary x UK two-step garage",
+          "secondary": [
+            "Atmospheric jungle",
+            "Breakbeat",
+            "Comedy documentary",
+            "Natural-history field recording",
+            "Experimental bass",
+            "Vintage British observational broadcasting"
+          ],
+          "tempo": "134 BPM swung two-step foundation with 170 BPM jungle breakbeat excursions. Tempo, swing, density and rhythmic stability respond to the expedition's events.",
+          "groove": "Warm shuffling two-step drums, rolling jungle breaks, elastic sub-bass, environmental percussion and location-specific rhythmic details. The forest itself becomes part of the groove."
+        },
+        "vocal": {
+          "lead": "ONE distinguished older British male gentleman, warm weathered baritone, articulate naturalist's vocabulary and quietly eccentric YouTube expedition-host personality. Begins confidently and professionally. Injuries, surprise, fear, fatigue, venom or poisoning progressively affect the SAME recognisable narrator.",
+          "delivery": [
+            "OPENING: Begins an improvised YouTube-style jungle expedition, introducing himself, the location and his intention to discover interesting creatures.",
+            "DISCOVERY: When an animal is encountered, describe what is visible before attempting identification.",
+            "APPROACH: Curiosity may lead him to attempt a playful bop, gentle touch or hold. The encounter is fictional and consequences remain unpredictable.",
+            "REACTION: The animal may tolerate him, escape, threaten, bite, sting, scratch, spray, struggle or remain entirely indifferent.",
+            "INJURY: Any resulting injury affects breath, pacing, diction, confidence, physical movement and subsequent decision-making.",
+            "DISTRESS: Venomous injury or poisoning may create progressive fictional symptoms, consistently influencing narration and music.",
+            "EXIT: The narrator automatically abandons the expedition after a maximum of TEN encounters, or earlier when conditions demand it.",
+            "AT THE GAFF: The same gentleman returns home and describes the consequences, whether successful, disappointed, exhausted, injured or unexpectedly pleased."
+          ],
+          "layers": [
+            "Natural breathing, shifting microphone distance, footsteps and occasional involuntary reactions.",
+            "Retain the narrator's distinguished speaking identity throughout every emotional and physical condition.",
+            "No singing, rapping, chorus or replacement narrator.",
+            "Symptoms alter vocal performance organically rather than through exaggerated cartoon voices.",
+            "Allow silence when the narrator is observing, recovering or struggling to speak."
+          ]
+        },
+        "instrument": {
+          "rhythm": [
+            "Shuffling UK two-step drums with swinging kicks, displaced snares and crisp ghost percussion.",
+            "170 BPM jungle breakbeat fills triggered by sudden animal movements.",
+            "Environmental percussion derived from branches, leaves, rainfall, footsteps and animal activity.",
+            "Broken rhythmic patterns, dropped beats and unstable percussion during injury or distress."
+          ],
+          "melody": [
+            "Warm dub-influenced basslines and atmospheric minor-key synthesizers.",
+            "Sparse electric piano, marimba and restrained woodwind phrases.",
+            "Small recurring melodic motifs associated with the narrator's curiosity.",
+            "Increasingly detuned or incomplete melodic fragments when his physical condition deteriorates."
+          ],
+          "atmosphere": [
+            "Detailed jungle field recordings, insects, birds, wind, foliage and distant water.",
+            "Animal-specific movement, breathing, calls and environmental interaction sounds.",
+            "Subtle tape warmth and documentary microphone handling noise.",
+            "Heartbeat-like bass pulses and spatial disorientation during dangerous encounters.",
+            "Domestic room ambience, kettle sounds and furniture movement after returning home."
+          ]
+        },
+        "style": {
+          "mood": "Curious, unpredictable, dryly humorous, adventurous and occasionally frightening. Calm educated observation collides with the consequences of questionable field decisions.",
+          "arrangement": "MAXIMUM AVAILABLE TRACK LENGTH. RUNTIME EXPEDITION GENERATOR: Choose a coherent fictional jungle or wilderness location. Begin with the narrator starting a YouTube-style exploration intending to find anything interesting. Dynamically generate ZERO TO TEN animal encounters. Do not force discoveries. For each encounter, identify the species when reasonably possible, otherwise describe an unknown creature cautiously. Narrator may attempt to bop, touch or hold the creature. Independently determine whether the creature tolerates, evades or reacts defensively. Accumulate the physical and emotional consequences. Injury, weather, exhaustion, navigation trouble or danger can cause an early exit. TEN ENCOUNTERS IS AN ABSOLUTE MAXIMUM. After the final encounter or unsuccessful search, transition to the journey home and a mandatory AT THE GAFF conclusion. The ending must reflect what actually happened.",
+          "identity": "A distinguished elderly British naturalist attempts an unpredictable YouTube jungle run over scene-responsive UK two-step and jungle breakbeats. His spoken performance, physical condition and the music evolve together through every discovery and mistake."
+        },
+        "production_level": {
+          "quality": "Immersive field-documentary sound with intimate realistic narration, organic two-step drums, detailed jungle ambience and cinematic but restrained sound design.",
+          "dynamics": "Curiosity produces light swinging grooves. Approach creates rhythmic suspense. Animal reactions trigger jungle breakbeat bursts. Injury and fatigue can interrupt, destabilise or thin the music. Recovery restores some rhythmic coherence without erasing consequences.",
+          "mix": "Keep spoken narration intelligible and emotionally authentic. Duck instruments beneath detailed observations. Animal movements trigger breakbeat edits, short temporal rewinds and spatial sound changes. Track injury state continuously: minor scratches produce subtle breath and timing changes; significant fictional venom or poisoning events introduce growing vocal strain, unstable rhythm and subjective disorientation. Never reset the narrator's condition between encounters without a plausible reason. At home, restore familiar domestic acoustics while retaining any remaining vocal fatigue."
+        },
+        "wildcard": {
+          "twist": "Each generation may produce no animal discoveries, a peaceful expedition, a sequence of increasingly ridiculous encounters or an unexpectedly dangerous run. The narrator cannot know which outcome will happen. His dignified commentary remains the central source of humour.",
+          "musical_device": "DYNAMIC ENCOUNTER ENGINE: ENCOUNTER COUNT begins at ZERO and increments only when a distinct animal is genuinely discovered. At each discovery generate species identity, appearance, behaviour, interaction choice, animal response and consequences. KNOWN SPECIES: use credible established natural-history characteristics. UNKNOWN SPECIES: describe appearances and behaviour without inventing authoritative facts. PHYSICAL STATE persists across encounters. Two-step represents movement and observation; jungle breakbeats represent sudden unpredictable reactions. At count TEN, immediately end exploration. At any count from ZERO to TEN, serious danger or exhaustion may force retreat. Always finish AT THE GAFF with a consequence-aware spoken conclusion."
+        },
+        "sound_vibe": "MAXIMUM AVAILABLE TRACK LENGTH. An immersive improvised spoken-word jungle expedition accompanied by shuffling UK two-step garage, atmospheric jungle breakbeats and detailed natural field recordings. ONE distinguished elderly British gentleman begins a YouTube-style expedition to find interesting animals. At runtime invent a coherent location and generate ZERO TO TEN encounters, never guaranteeing discoveries. He observes species, describes appearance and behaviour, and may impulsively attempt a playful bop or hold. Fictional animal reactions vary independently: tolerance, escape, indifference, defensive attack or unexpected behaviour. No real-world wildlife handling instructions. The narrator's voice and the musical arrangement must respond immediately to consequences. Scratches, bites, stings, venom, poisoning, fatigue and fear may change breathing, diction, rhythm, confidence and physical movement. Track every injury consistently; do not magically restore health between scenes. Let gentle two-step accompany exploration, with frantic jungle breaks triggered by encounters, movement and danger. Severe distress can destabilise bass, percussion and melodic coherence. If nothing is found, let the empty search itself become the story. At TEN encounters maximum, or earlier if the situation requires, automatically end the expedition and return home. Finish with a distinctive AT THE GAFF spoken sequence, domestic soundscape and outcome reflecting the actual discoveries, mistakes and physical condition. No predetermined victory, forced injury, singing or scripted documentary ending.",
+        "lyrical_vibe": "NO PREWRITTEN LYRICS. GENERATE SPONTANEOUS FIRST-PERSON DOCUMENTARY SPEECH. OPENING: A distinguished older British gentleman introduces his YouTube jungle run, explains where he has travelled and expresses his hope of discovering interesting wildlife. EXPLORATION: Describe landscape, weather, sounds, tracks and movement as encountered. DISCOVERY: For every actual animal sighting, describe its observable size, shape, colour, texture, position and distinctive behaviour before identification. Known animals receive carefully grounded natural-history context; unknown creatures receive cautious physical descriptions and clearly qualified speculation. INTERACTION: The narrator may whimsically attempt to bop, touch or hold the animal. Generate the creature's reaction without guaranteeing aggression or cooperation. Some encounters end peacefully, some are embarrassing and some cause defensive injuries. CONSEQUENCE: Track scratches, bites, stings, venom exposure, poisoning, shock, fatigue and growing caution. Distinguish venom delivered through a bite or sting from poisoning through contact or ingestion. Do not invent confident medical explanations or practical handling advice. Vocal breath, word choice, pauses, composure and musical stability should reflect the character's evolving condition. ENCOUNTER LIMIT: Generate between ZERO and TEN sightings. No forced discoveries; stop at ten or retreat earlier because of danger, injury, exhaustion or environmental conditions. HOME RETURN — AT THE GAFF: Always conclude back at his home. If nothing was found, he reflects on an unsuccessful outing. If encounters were peaceful, he offers an understated summary. If injured, he acknowledges the consequences and any need for help. If the expedition went badly, he may return dishevelled, humbled or barely able to maintain his customary dignity. Retain gentle British understatement, observational accuracy, spontaneous self-correction, dry humour and continuity of physical state. No chorus, no scripted catchphrases, no sensationalised narration and no magical recovery."
+      }
+    },
+    {
+      "id": "i-make",
+      "name": "i-make",
+      "prompt": ""
+    },
+    {
+      "id": "life",
+      "name": "Life",
+      "prompt": ""
+    },
+    {
+      "id": "cosmos",
+      "name": "Cosmos",
+      "prompt": ""
+    },
+    {
+      "id": "after-hours",
+      "name": "After Hours",
+      "prompt": ""
+    }
   ]
 }
