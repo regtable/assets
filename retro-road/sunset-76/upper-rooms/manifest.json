@@ -1,5 +1,5 @@
 {
-  "moduleUrl": "https://cdn.jsdelivr.net/gh/regtable/assets@b3737a5edefa243898196f20706bad2ebcc342c6/retro-road/sunset-76/upper-rooms/hotel76-upstairs.mjs",
+  "version": "6ceabec94af176fd67456740e5d2e1e664fb4346",
   "rooms": [
     6,
     7,
@@ -8,6 +8,6 @@
     15,
     16
   ],
-  "version": "b3737a5edefa243898196f20706bad2ebcc342c6",
-  "channelsUrl": "https://raw.githubusercontent.com/regtable/assets/main/retro-road/sunset-76/upper-rooms/76-tv-channels/channels.json"
+  "channelsUrl": "https://raw.githubusercontent.com/regtable/assets/main/retro-road/sunset-76/upper-rooms/76-tv-channels/channels.json",
+  "moduleUrl": "https://cdn.jsdelivr.net/gh/regtable/assets@6ceabec94af176fd67456740e5d2e1e664fb4346/retro-road/sunset-76/upper-rooms/hotel76-upstairs.mjs"
 }
