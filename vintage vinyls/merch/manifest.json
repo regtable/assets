@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "layouts": {
+    "M": {
+      "columns": 10,
+      "rows": 2
+    },
+    "A": {
+      "columns": 2,
+      "rows": 3
+    },
+    "B": {
+      "columns": 2,
+      "rows": 3
+    }
+  },
+  "slots": []
+}

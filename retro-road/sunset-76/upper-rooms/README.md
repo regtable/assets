@@ -12,7 +12,7 @@ Each `EXPORT | Room …` collection is furniture only, independently exported to
 
 ## Assets
 
-Each guest room has a solid bed with padded headboard, quilt and pillows; two drawer bedside cabinets and lamps; a dresser; a framed wardrobe; lounge chair and side table; luggage bench; framed photo placeholder; solid TV chassis and screen; and a buttoned remote on the bed. The six rooms vary in layout, wood, upholstery, headboard details and chair/wardrobe treatments. These are detailed editable starting assets, not photographs or a substitute for your later room-specific art direction.
+Each guest room has a solid bed with padded headboard, quilt and pillows; two drawer bedside cabinets and lamps; a dresser; a framed wardrobe; lounge chair and side table; luggage bench; framed photo placeholder; solid TV chassis and screen; and a buttoned remote beneath the TV. The six rooms vary in layout, wood, upholstery, headboard details and chair/wardrobe treatments. These are detailed editable starting assets, not photographs or a substitute for your later room-specific art direction.
 
 All 832 furniture meshes passed the closed-manifold edge audit, with outward normals recalculated. Grain textures are generated bitmap images packed into Blender and embedded in each GLB. No dependency on external procedural Blender shaders. Each GLB is approximately 1.6–1.7 MiB. Collisions use explicit bounding boxes for substantial furniture only, not one hull across an entire room or collisions on buttons/lamps/paintings.
 
@@ -20,7 +20,7 @@ All 832 furniture meshes passed the closed-manifold edge audit, with outward nor
 
 Add each eclipse photo URL to that room's `eclipseImageUrl` in `rooms.json`, commit, then refresh the space. No source-code change. The photograph replaces the solid canvas material; the framed object remains editable in Blender.
 
-Channel names and prompts are in `76-tv-channels/channels.json`. Seven channels are provided. Empty prompts still generate. Song receives channel prompt as `soundPrompt`; image receives the configured prefix, channel name and the same schema/prompt. No lyrics prompts. The remote opens the TV's own modal. See the TV-folder README for retries and audio behavior.
+Channel names and prompts are in `76-tv-channels/channels.json`. Seven channels are provided. Empty prompts still generate. Song receives channel prompt as `soundPrompt`; image receives the configured prefix, channel name and the same schema/prompt. No lyrics prompts. The remote opens the TV's channel-control modal and closes automatically on selection. The TV itself shows loading/off messages and plays the completed show. Closing the remote does not stop generation or playback. See the TV-folder README for retries and audio behavior.
 
 ## Loading and deloading
 

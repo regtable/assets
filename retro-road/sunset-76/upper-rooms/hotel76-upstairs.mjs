@@ -1,5 +1,5 @@
 import * as THREE from 'https://esm.sh/three@0.180.0';
-import { createTelevision } from './76-tv-channels/television.mjs';
+import { createTelevision } from './76-tv-channels/television-persistent.mjs';
 
 export function createHotel76Upstairs(options = {}) {
   const group = new THREE.Group(); group.name = 'Sunset 76 | independent upstairs room furnishings';
@@ -8,7 +8,8 @@ export function createHotel76Upstairs(options = {}) {
   const television = createTelevision({
     services: options.services || {},
     onOpenChange(open) { options.onModalChange?.(open); },
-    onImage(url) { rooms.get(television.roomId)?.setScreen(url); }
+    onImage(url) { rooms.get(television.roomId)?.setScreen(url); },
+    onState(state) { rooms.get(television.roomId)?.setScreenState(state); }
   });
   const ready = (async () => {
     const response = await fetch(`https://raw.githubusercontent.com/regtable/assets/main/retro-road/sunset-76/upper-rooms/rooms.json?t=${Date.now()}`, { signal: abort.signal, cache: 'no-store' });
@@ -21,7 +22,7 @@ export function createHotel76Upstairs(options = {}) {
   function unload(id) {
     const job = pending.get(id); if (job) { job.cancelled = true; job.room?.dispose(); pending.delete(id); }
     const room = rooms.get(id); if (room) { room.dispose(); rooms.delete(id); }
-    if (television.roomId === id) television.close();
+    if (television.roomId === id) { television.stop();television.close(); }
   }
   function load(config) {
     const job = { cancelled: false, room: null }; pending.set(config.id, job);
@@ -29,7 +30,7 @@ export function createHotel76Upstairs(options = {}) {
       try {
         const module = await import(new URL(config.module, import.meta.url).href);
         if (disposed || job.cancelled) return;
-        const room = module.createRoom({ config, onRemote: () => television.open(config.id) }); job.room = room;
+        const room = module.createRoom({ config, onRemote: () => television.open(config.id,config.label) }); job.room = room;
         await room.ready;
         if (disposed || job.cancelled || !lastPlayer || distance(config, lastPlayer) > 18 || lastPlayer.y < 5.3 || lastPlayer.y > 12.7) { room.dispose(); return; }
         rooms.set(config.id, room); group.add(room.group);
@@ -45,7 +46,7 @@ export function createHotel76Upstairs(options = {}) {
     update(delta, player, isMuted = false) {
       if (disposed) return;
       lastPlayer = { x: player.x, y: player.y, z: player.z }; television.setMuted(isMuted);
-      if (television.isOpen && !rooms.get(television.roomId)?.contains(player)) television.close();
+      if (television.roomId!==null && !rooms.get(television.roomId)?.contains(player)) { television.stop();television.close(); }
       for (const config of configs) {
         const d = distance(config, player), active = rooms.has(config.id) || pending.has(config.id);
         if (active && (player.y < 5.3 || player.y > 12.7 || d > 18)) unload(config.id);

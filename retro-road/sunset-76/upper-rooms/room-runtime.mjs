@@ -4,19 +4,33 @@ import { GLTFLoader } from 'https://esm.sh/three@0.180.0/examples/jsm/loaders/GL
 export function createHotelRoom({ config, glbUrl, onRemote = () => {} }) {
   const group = new THREE.Group(); group.name = `Sunset 76 | room ${config.id}`;
   let disposed = false, screen = null, imageVersion = 0;
-  const textures = new Set(), screenMaterial = new THREE.MeshBasicMaterial({ color: '#15212c' });
+  const textures = new Set(), screenMaterial = new THREE.MeshBasicMaterial({ color: '#ffffff' });
+  const canvas=document.createElement('canvas');canvas.width=1024;canvas.height=576;
+  const context=canvas.getContext('2d'),display=new THREE.CanvasTexture(canvas);
+  display.colorSpace=THREE.SRGBColorSpace;display.flipY=false;screenMaterial.map=display;textures.add(display);
+  let screenImage=null,screenState={phase:'idle'};
+  function drawScreen(){
+    if(!context||disposed)return;
+    const w=canvas.width,h=canvas.height;context.fillStyle='#101820';context.fillRect(0,0,w,h);
+    if(screenImage){const scale=Math.max(w/screenImage.width,h/screenImage.height),iw=screenImage.width*scale,ih=screenImage.height*scale;context.drawImage(screenImage,(w-iw)/2,(h-ih)/2,iw,ih);}
+    const s=screenState;
+    const message=s.phase==='idle'?'PLEASE USE REMOTE!':s.phase==='generating'?'LOADING YOUR SHOW…':s.phase==='retrying-audio'?`NO AUDIO — RETRYING ${s.audioRetries}/3`:s.phase==='retrying-image'?`MISSING IMAGE — RETRYING ${s.imageRetries}/3`:s.phase==='unavailable'?'SORRY, SERVICE UNAVAILABLE':s.phase==='partial'?(s.imageUrl?'NO AUDIO — PLEASE RE-TUNE':'MISSING IMAGE — PLEASE RE-TUNE'):'';
+    const caption=s.audioError||message;
+    if(!screenImage){context.textAlign='center';context.fillStyle='#e9c778';context.font='bold 28px sans-serif';context.fillText('SUNSET 76 TELEVISION',w/2,125);context.fillStyle='#ffffff';context.font='bold 34px sans-serif';context.fillText(caption||(s.imageUrl?'LOADING PICTURE…':'PLEASE USE REMOTE!'),w/2,h/2);context.font='24px sans-serif';context.fillStyle='#bac7ce';context.fillText(s.channelName||'Remote control is beneath the television',w/2,h/2+55);}
+    else if(caption&&s.phase!=='generating'){context.fillStyle='#071018dc';context.fillRect(0,h-70,w,70);context.textAlign='center';context.fillStyle='#ffffff';context.font='bold 23px sans-serif';context.fillText(caption,w/2,h-27);}
+    display.needsUpdate=true;
+  }
+  function setScreenState(state){
+    screenState=state;
+    if(state.phase==='idle'||(state.phase==='generating'&&!state.imageUrl&&!state.audioUrl)){screenImage=null;imageVersion++;}
+    drawScreen();
+  }
+  drawScreen();
   function setScreen(imageUrl) {
     const id = ++imageVersion;
     new THREE.TextureLoader().load(imageUrl, texture => {
       if (disposed || id !== imageVersion) { texture.dispose(); return; }
-      texture.colorSpace = THREE.SRGBColorSpace; texture.flipY = false;
-      // Generated 3:2 splash is fitted into the TV's 16:9 screen without stretching.
-      const aspect = texture.image.width / texture.image.height, target = 1.55 / .88;
-      texture.wrapS = texture.wrapT = THREE.ClampToEdgeWrapping;
-      if (aspect < target) { texture.repeat.y = aspect / target; texture.offset.y = (1 - texture.repeat.y) / 2; }
-      else { texture.repeat.x = target / aspect; texture.offset.x = (1 - texture.repeat.x) / 2; }
-      const previous = screenMaterial.map; screenMaterial.color.set('#ffffff'); screenMaterial.map = texture; screenMaterial.needsUpdate = true;
-      textures.add(texture); if (previous) { textures.delete(previous); previous.dispose(); }
+      screenImage=texture.image;drawScreen();texture.dispose();
     }, undefined, error => { if (!disposed) console.warn('TV splash texture unavailable', error); });
   }
   const paintingJobs = [];
@@ -40,7 +54,7 @@ export function createHotelRoom({ config, glbUrl, onRemote = () => {} }) {
   });
   const contains = player => player.y >= 6 && player.y < 12 && player.x >= config.bounds.x[0] && player.x <= config.bounds.x[1] && player.z >= config.bounds.z[0] && player.z <= config.bounds.z[1];
   return {
-    group, ready, config, contains, setScreen,
+    group, ready, config, contains, setScreen, setScreenState,
     handleClick(object) {
       if (disposed) return false;
       let node = object;

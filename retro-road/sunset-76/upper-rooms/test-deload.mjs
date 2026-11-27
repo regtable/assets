@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 const source = await fs.readFile(new URL('./hotel76-upstairs.mjs', import.meta.url), 'utf8');
 let disposedRooms = 0, creates = 0;
 class Group { constructor() { this.children = []; } add(o) { o.parent = this; this.children.push(o); } removeFromParent() { if (this.parent) this.parent.children = this.parent.children.filter(o => o !== this); } clear() { this.children = []; } }
-globalThis.__hotelTest = { Group, television: () => ({ isOpen: false, setMuted() {}, close() {}, dispose() {} }), createRoom: options => { creates++; const group = new Group(); return { group, ready: Promise.resolve(), config: options.config, dispose() { disposedRooms++; group.removeFromParent(); }, handleClick() { return false; }, checkCollision() { return false; } }; } };
+globalThis.__hotelTest = { Group, television: () => ({ isOpen: false, roomId: null, setMuted() {}, close() {}, stop() {}, dispose() {} }), createRoom: options => { creates++; const group = new Group(); return { group, ready: Promise.resolve(), config: options.config, dispose() { disposedRooms++; group.removeFromParent(); }, handleClick() { return false; }, checkCollision() { return false; } }; } };
 const fixture = source.replace(/^import \* as THREE.*$/m, 'const THREE = {Group: globalThis.__hotelTest.Group};').replace(/^import \{ createTelevision \}.*$/m, 'const createTelevision = globalThis.__hotelTest.television;').replace('await import(new URL(config.module, import.meta.url).href)', 'await Promise.resolve({createRoom: globalThis.__hotelTest.createRoom})');
 const originalFetch = globalThis.fetch;
 const config = JSON.parse(await fs.readFile(new URL('./rooms.json', import.meta.url)));
