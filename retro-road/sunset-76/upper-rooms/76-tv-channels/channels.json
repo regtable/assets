@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "imagePromptPrefix": "Use the following schema to infer an image to add for the selected channel as a splash while the song plays.",
   "channels": [
     {
@@ -10,7 +10,73 @@
     {
       "id": "nature",
       "name": "Nature",
-      "prompt": ""
+      "prompt": {
+        "genre": {
+          "primary": "Spoken-word natural history documentary",
+          "secondary": [
+            "British observational documentary",
+            "Ambient field recording",
+            "Minimalist chamber music",
+            "Electroacoustic sound design",
+            "Vintage educational broadcasting"
+          ],
+          "tempo": "Free-flowing narration, unhurried and natural. Subtle 65-85 BPM atmospheric movement when music is present.",
+          "groove": "The subject's actual behaviour determines the rhythm. Movement, repetition, pauses and interaction organically shape the accompanying soundscape."
+        },
+        "vocal": {
+          "lead": "ONE distinguished elderly British gentleman with a rich, warm, weathered baritone, articulate pronunciation, measured pacing and the quiet authority of a lifelong naturalist. Genuinely fascinated, intellectually curious and occasionally dryly amused. Original voice, not an imitation of a named presenter.",
+          "delivery": [
+            "Speak as though quietly observing something happening directly before the narrator, not reading a prepared encyclopaedia entry.",
+            "Begin by establishing a location and drawing attention to a particular THING exhibiting a particular BEHAVIOUR.",
+            "When encountering a KNOWN SPECIES, identify it when justified and describe relevant established characteristics and behaviour.",
+            "When encountering an UNKNOWN THING, carefully describe its visible appearance, dimensions, colour, structure, movement and interaction without pretending to know its identity.",
+            "Allow spontaneous corrections, thoughtful pauses, hesitant deductions and occasional understated amazement.",
+            "If a second object or creature participates, precisely describe the interaction and how each participant responds.",
+            "Never become hysterical, sensationalist or artificially dramatic. The narrator's composure makes strange discoveries more compelling."
+          ],
+          "layers": [
+            "Single foreground narrator with subtle natural breath and gentle microphone warmth.",
+            "No singing, rapping, chorus or backing vocals.",
+            "Environmental sounds become briefly prominent whenever the narrator pauses to observe.",
+            "Quiet field-recording intimacy rather than theatrical voice acting."
+          ]
+        },
+        "instrument": {
+          "rhythm": [
+            "Subtle percussion made from environmental sounds associated with the observed subject.",
+            "Soft brushed drums, occasional wooden clicks and delicate organic pulses.",
+            "Natural rhythmic patterns derived from footsteps, wingbeats, mechanical movements, tapping or repeated behaviour."
+          ],
+          "melody": [
+            "Gentle felt piano and muted chamber strings.",
+            "Sparse woodwind phrases and restrained analog synthesizer tones.",
+            "Small melodic gestures that follow the subject's movement without overpowering the narrator."
+          ],
+          "atmosphere": [
+            "Detailed location-specific field recordings.",
+            "Close-up sounds associated with the subject's physical characteristics.",
+            "Natural wind, insects, water, foliage, room tone or mechanical ambience as appropriate.",
+            "Subtle vintage broadcast warmth and authentic spatial perspective.",
+            "Periods of near silence that allow unusual sounds to be heard clearly."
+          ]
+        },
+        "style": {
+          "mood": "Curious, observational, intelligent, gently whimsical and quietly astonishing. Treat the ordinary as fascinating and the extraordinary as worthy of careful examination.",
+          "arrangement": "MAXIMUM AVAILABLE TRACK LENGTH. At runtime invent a coherent documentary encounter by selecting a specific location, one central subject and one distinctive activity. The subject may be a familiar species, an unfamiliar organism, an unusual object or a plausible unidentified phenomenon. Select whether it acts ALONE or interacts WITH ANOTHER THING. Begin with a natural environmental introduction. Progress through initial sighting, detailed visual examination, observation of the unusual behaviour, possible explanation, a further development and a thoughtful concluding observation. Allow behaviour to change organically rather than manufacturing dramatic conflict. Keep the same encounter throughout.",
+          "identity": "An elderly gentleman documents peculiar encounters with the patient precision of a naturalist. Each generation discovers something different, but the defining character remains the same: meticulous visual description, genuine curiosity and extraordinary restraint."
+        },
+        "production_level": {
+          "quality": "Naturalistic documentary sound with clear narration, believable spatial acoustics, restrained musical scoring and detailed environmental Foley.",
+          "dynamics": "Narration remains foregrounded. Soundscapes subtly intensify when the subject demonstrates unusual behaviour, then recede to permit observation.",
+          "mix": "Warm centred spoken voice, environmental details distributed naturally in stereo, minimal compression and subtle analog character. Duck music gently beneath speech. Allow short pauses for the listener to hear the behaviour being described. Avoid exaggerated cinematic impacts, intrusive percussion and unnecessary musical transitions."
+        },
+        "wildcard": {
+          "twist": "At runtime choose between a KNOWN and UNKNOWN encounter. A familiar species may exhibit a surprisingly specific but plausible behaviour. An unidentified subject may look extraordinary while performing an utterly mundane activity. The narrator must adapt his certainty to the available evidence rather than inventing authoritative explanations.",
+          "musical_device": "OBSERVE BEFORE EXPLAINING. Introduce an audible movement or interaction before the narrator names it. Let the narrator examine the evidence, describe what changes, consider an interpretation and occasionally revise his initial impression. Small recurring environmental sounds become identifiable as the observation progresses."
+        },
+        "sound_vibe": "Create an immersive spoken-word observational documentary led by ONE distinguished elderly British gentleman. His rich, warm, measured narration conveys patience, intelligence, restrained wit and genuine fascination. At runtime invent a specific scene featuring a THING doing a distinctive THING, either independently or interacting with another object, organism or environmental feature. Choose between a recognisable real species and an unidentified or fictional subject. If known, give accurate natural-history context without fabricating biological facts. If unknown, describe only what could reasonably be observed: shape, texture, colour, proportions, movement, orientation, sounds and interactions. Support the spoken performance with delicate field recordings, restrained felt piano, subtle chamber music and highly specific physical Foley. Allow observational pauses, gentle self-corrections and curious deductions. Let the subject's behaviour shape the soundscape. Maintain one coherent encounter with a beginning, developing observation and thoughtful conclusion. Never turn the documentary into singing, theatrical narration, sensational horror or exaggerated comedy.",
+        "lyrical_vibe": "NO SUNG LYRICS. GENERATE NATURAL SPOKEN DOCUMENTARY NARRATION. At runtime select a plausible environment and discover a subject performing one distinctive observable action. It may be a KNOWN SPECIES, an UNKNOWN ORGANISM or an unusual INANIMATE OBJECT. Decide whether it is acting alone or interacting with another thing. OPENING: The elderly narrator calmly introduces the location and notices something worth examining. INITIAL OBSERVATION: Describe exactly where the subject is, its approximate size, outline, colour, surface characteristics, orientation and visible movements. KNOWN SPECIES PATH: Identify the species only when justified, provide relevant established natural-history knowledge and compare the observed behaviour with familiar patterns. UNKNOWN PATH: Avoid inventing scientific classifications or presenting speculation as fact. Use careful comparative descriptions, uncertainty and measured hypotheses. BEHAVIOURAL DEVELOPMENT: Follow the subject's unusual action step by step, describing cause and effect where visible and separating observations from interpretations. INTERACTION: If another thing is present, describe both participants and their physical relationship without attributing unsupported intentions. DISCOVERY: Allow one genuinely surprising detail, revised interpretation or subtle comic observation to emerge naturally. CONCLUSION: Reflect on what has actually been observed and what remains uncertain. Use precise sensory vocabulary, gentle British understatement, considered pauses and occasional dry wit. Never announce production instructions, invent a fake scientific consensus or force a dramatic resolution unless the scene includes some sort of battle of strength or whit."
+      }
     },
     {
       "id": "i-boop",
